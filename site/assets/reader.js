@@ -114,7 +114,7 @@
     const label = document.createElement('span');
     const chapterLabel = data.id === 'year-4' ? data.shortTitle : `Chapter ${chapter().number}`;
     const pageLabel = page.number === 0 ? 'Cover' : `p. ${page.number}`;
-    label.textContent = `${chapterLabel} · Part ${page.postPart} · ${pageLabel}`;
+    label.textContent = `${chapterLabel} · ${pageLabel}`;
     const original = document.createElement('a');
     original.className = 'original-post-link';
     original.href = page.originalPost;

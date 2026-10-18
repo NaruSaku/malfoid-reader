@@ -11,7 +11,7 @@ Original stories are linked; their full text is not included. Chinese editions, 
 
 `site/` contains a complete static website. The homepage lists comics; `comic.html?comic=<id>` displays the selected comic and its chapters; `reader.html` opens its pages. Reading progress is saved independently for each comic. Page-by-page and scrolling reading, full-size enlargement, and light/dark backgrounds are supported.
 
-Each image has a compact caption with its chapter, original post part, and page number on the left, and **Original post on X** on the right. The link opens the corresponding artwork post in a new tab. Scrolling mode keeps only a narrow caption strip and a small gap between images.
+Each image has a compact caption with its chapter and page number on the left, and **Original post on X** on the right. The link opens the corresponding artwork post in a new tab. Scrolling mode keeps only a narrow caption strip and a small gap between images.
 
 Existing Draconia reader links without a `comic` parameter keep working, including their page numbers and original reading progress. Draconia page asset paths are preserved.
 
