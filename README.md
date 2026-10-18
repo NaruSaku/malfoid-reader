@@ -40,6 +40,14 @@ Run `python3 -m http.server 8765 --bind 127.0.0.1 --directory site`, then open `
 
 GitHub Pages must publish the contents of `site/`. When using a custom workflow, configure the repository's **Settings → Pages → Source** as **GitHub Actions**.
 
+## Website analytics
+
+Cloudflare Web Analytics can be added without moving this site or changing its URL. In your Cloudflare account, open **Observability → Analytics → Web analytics**, add the hostname `narusaku.github.io`, then copy the installation snippet. Use its public `data-cf-beacon` site token with `python3 scripts/configure_analytics.py --token <public-site-token>`. This installs the beacon on the collection, comic, and reader pages. Review and run the normal manual publishing workflow. An account API key is not needed and must never be put into the website.
+
+Statistics start after installation and publication; earlier visits cannot be recovered through this integration. The dashboard reports visits, page views, referrers, country, device/browser, and performance. Cloudflare does not expose individual visitor identities or raw GitHub Pages server logs here. It omits query strings, so these basic reports do not separate comics or chapters selected through `?comic=...&chapter=...`. SPA measurement is disabled so reading navigation does not inflate document page-view counts. Browser blockers can prevent measurement, and these numbers are estimates rather than a complete request log.
+
+Cloudflare Web Analytics was enabled on all three page types on October 18, 2026. View the reports in your Cloudflare account under **Observability → Analytics → Web analytics → narusaku.github.io**. The dashboard is private to your account. Changing the token requires running the configuration helper and manually publishing again.
+
 ## Credits
 
 This is a noncommercial, AI-assisted Harry Potter fan comic adaptation. Artwork and story credits remain with their respective creators. No general reuse license is granted by this repository.
