@@ -1,34 +1,139 @@
 {
   "title": "Malfoid Reader",
-  "subtitle": "Draconia Malfoy and the Boy Who Said No",
-  "artist": {"name": "Crepuscule3307", "url": "https://x.com/wanruochenhun"},
-  "author": {"name": "nomoontwo_", "url": "https://x.com/nomoontwo_"},
-  "storyUrl": "https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no",
   "quality": 92,
-  "chapters": [
+  "artist": {
+    "name": "Crepuscule3307",
+    "url": "https://x.com/wanruochenhun"
+  },
+  "comics": [
     {
-      "id": "chapter-1", "number": "1", "title": "The Girl Who Was Never Told No",
-      "source": "漫画制作/第一章", "cover": "封面_英文版.png", "lastPage": 38,
-      "description": "An offered hand. An unexpected answer. A beginning neither of them planned.",
-      "storyUrl": "https://www.wattpad.com/story/416789252/part/1660844428"
+      "title": "Draconia Malfoy and the Boy Who Said No",
+      "artist": {
+        "name": "Crepuscule3307",
+        "url": "https://x.com/wanruochenhun"
+      },
+      "author": {
+        "name": "nomoontwo_",
+        "url": "https://x.com/nomoontwo_"
+      },
+      "storyUrl": "https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no",
+      "chapters": [
+        {
+          "id": "chapter-1",
+          "number": "1",
+          "title": "The Girl Who Was Never Told No",
+          "source": "漫画制作/第一章",
+          "cover": "封面_英文版.png",
+          "lastPage": 38,
+          "description": "An offered hand. An unexpected answer. A beginning neither of them planned.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1660844428",
+          "filenamePattern": "第{page:02d}页_英文版.png"
+        },
+        {
+          "id": "chapter-1-1",
+          "number": "1.1",
+          "title": "The Empty Seat",
+          "source": "漫画制作/第1.1章",
+          "cover": "第00页.png",
+          "lastPage": 37,
+          "description": "The first week of term, and a place carefully kept beside her.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1661358536",
+          "filenamePattern": "第{page:02d}页_英文版.png"
+        },
+        {
+          "id": "chapter-2",
+          "number": "2",
+          "title": "The Remembrall",
+          "source": "漫画制作/第二章",
+          "cover": "标题页_英文版.png",
+          "lastPage": 44,
+          "description": "Potions, flying lessons, and a little glass ball that changes things.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1660848583",
+          "filenamePattern": "第{page:02d}页_英文版.png"
+        },
+        {
+          "id": "chapter-2-1",
+          "number": "2.1",
+          "title": "The Right Sort of Friends",
+          "source": "漫画制作/第2.1章",
+          "cover": "封面_英文版.png",
+          "lastPage": 18,
+          "description": "A letter from home. Halloween at Hogwarts. A friendship of her own.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1661361926",
+          "filenamePattern": "第{page:02d}页_英文版.png"
+        }
+      ],
+      "id": "draconia",
+      "shortTitle": "Draconia",
+      "sourceRoot": "德拉科妮娅·马尔福与那个对她说“不”的男孩",
+      "assetPrefix": "",
+      "setting": "Year One",
+      "complete": false,
+      "description": "A girl who had never been told no. A boy who changes that.",
+      "heroDescription": "Some stories begin with a spell. This one begins with a girl who had never been told no.",
+      "headingLines": [
+        {
+          "text": "Draconia Malfoy"
+        },
+        {
+          "text": "and the Boy",
+          "small": true
+        },
+        {
+          "text": "Who Said No",
+          "emphasis": true
+        }
+      ]
     },
     {
-      "id": "chapter-1-1", "number": "1.1", "title": "The Empty Seat",
-      "source": "漫画制作/第1.1章", "cover": "第00页.png", "lastPage": 37,
-      "description": "The first week of term, and a place carefully kept beside her.",
-      "storyUrl": "https://www.wattpad.com/story/416789252/part/1661358536"
-    },
-    {
-      "id": "chapter-2", "number": "2", "title": "The Remembrall",
-      "source": "漫画制作/第二章", "cover": "标题页_英文版.png", "lastPage": 44,
-      "description": "Potions, flying lessons, and a little glass ball that changes things.",
-      "storyUrl": "https://www.wattpad.com/story/416789252/part/1660848583"
-    },
-    {
-      "id": "chapter-2-1", "number": "2.1", "title": "The Right Sort of Friends",
-      "source": "漫画制作/第2.1章", "cover": "封面_英文版.png", "lastPage": 18,
-      "description": "A letter from home. Halloween at Hogwarts. A friendship of her own.",
-      "storyUrl": "https://www.wattpad.com/story/416789252/part/1661361926"
+      "id": "year-4",
+      "title": "Year 4",
+      "shortTitle": "Year 4",
+      "tagline": "Lyra Malfoy",
+      "sourceRoot": "Year 4",
+      "assetPrefix": "year-4",
+      "setting": "Year Four",
+      "complete": true,
+      "artist": {
+        "name": "Crepuscule3307",
+        "url": "https://x.com/wanruochenhun"
+      },
+      "author": {
+        "name": "DodgerWing",
+        "url": "https://x.com/DodgerWing"
+      },
+      "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
+      "description": "Sirius has a plan for dealing with Lyra Malfoy. Harry decides to try it.",
+      "heroDescription": "A letter from Sirius. A box of chocolates. A plan that works a little too well.",
+      "headingLines": [
+        {
+          "text": "Year 4"
+        },
+        {
+          "text": "Lyra Malfoy",
+          "emphasis": true
+        }
+      ],
+      "chapters": [
+        {
+          "id": "year4-chapter-1",
+          "number": "1",
+          "title": "Year 4",
+          "source": "漫画制作/Chapter1",
+          "cover": null,
+          "lastPage": 9,
+          "filenamePattern": "第{page:02d}页_英文彩色.png",
+          "pageSources": {
+            "5": "中文原图对应版_第05-09页/第05页_英文彩色.png",
+            "6": "中文原图对应版_第05-09页/第06页_英文彩色.png",
+            "7": "中文原图对应版_第05-09页/第07页_英文彩色.png",
+            "8": "中文原图对应版_第05-09页/第08页_英文彩色.png",
+            "9": "中文原图对应版_第05-09页/第09页_英文彩色.png"
+          },
+          "description": "The complete Lyra Malfoy one-shot, from the Hogwarts Express to the welcoming feast.",
+          "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152"
+        }
+      ]
     }
   ]
 }

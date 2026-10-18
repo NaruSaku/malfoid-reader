@@ -1,9 +1,15 @@
 'use strict';
 (() => {
-  const data = window.MALFOID;
+  const library = window.ReaderLibrary;
+  const comicId = new URLSearchParams(location.search).get('comic') || 'draconia';
+  const data = library?.comic(comicId);
   const container = document.querySelector('#comic-pages');
   if (!data?.chapters?.length) {
-    container.textContent = 'The comic library could not load. Please reload the page.';
+    container.textContent = 'This comic is not in the collection. ';
+    const back = document.createElement('a'); back.href = './'; back.textContent = 'Browse all comics →'; container.append(back);
+    document.querySelector('.reader-tools').hidden = true;
+    document.querySelector('.page-navigation').hidden = true;
+    document.querySelector('#original-chapter').hidden = true;
     return;
   }
   const $ = selector => document.querySelector(selector);
@@ -17,6 +23,11 @@
   const chapterSelect = $('#chapter-select');
   const pageSelect = $('#page-select');
   const chapter = () => data.chapters[chapterIndex];
+  $('#reader-home').href = `${library.projectUrl(data.id)}#chapters`;
+  $('#reader-comic-name').textContent = data.shortTitle;
+  $('#end-chapters').href = `${library.projectUrl(data.id)}#chapters`;
+  $('#end-heading').textContent = data.complete ? 'The end.' : 'Until the next chapter.';
+  $('#end-description').textContent = data.complete ? `Thank you for reading ${data.title}.` : 'Read ahead in the original story.';
   const scrollToCurrentPage = () => {
     const target = document.querySelector(`#comic-page-${pageIndex}`);
     if (!target) return;
@@ -41,10 +52,13 @@
     pageIndex = Number.isInteger(requested) ? Math.max(0, Math.min(requested, chapter().pages.length - 1)) : 0;
   };
   const save = () => {
-    writeStorage('malfoid.progress', JSON.stringify({ chapter: chapter().id, page: pageIndex }));
+    const progress = JSON.stringify({ chapter: chapter().id, page: pageIndex });
+    writeStorage(`malfoid.progress.${data.id}`, progress);
+    if (data.id === 'draconia') writeStorage('malfoid.progress', progress);
     const url = new URL(location.href);
     url.searchParams.set('chapter', chapter().id);
     url.searchParams.set('page', pageIndex);
+    if (data.id !== 'draconia' || url.searchParams.has('comic')) url.searchParams.set('comic', data.id);
     history.replaceState(null, '', url);
   };
   const updateNavigation = () => {
@@ -55,7 +69,7 @@
     $('#next').disabled = chapterIndex === data.chapters.length - 1 && pageIndex === current.pages.length - 1;
     $('#reader-end').hidden = !(chapterIndex === data.chapters.length - 1 && (mode === 'scroll' || pageIndex === current.pages.length - 1));
     $('#page-announcement').textContent = `Chapter ${current.number}, ${current.pages[pageIndex].label}`;
-    document.title = `${current.pages[pageIndex].label} · Chapter ${current.number} — Malfoid Reader`;
+    document.title = `${current.pages[pageIndex].label} · ${data.shortTitle} · Chapter ${current.number} — Malfoid Reader`;
     save();
   };
   const openZoom = index => {

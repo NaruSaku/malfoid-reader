@@ -7,18 +7,19 @@
   <meta name="description" content="Read the English Malfoid comic by Crepuscule3307 in chapter order.">
   <title>Read — Malfoid Reader</title>
   <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="catalog.js" defer></script>
-  <script src="assets/reader.js" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=2">
+  <script src="catalog.js?v=2" defer></script>
+  <script src="assets/shared.js?v=2" defer></script>
+  <script src="assets/reader.js?v=2" defer></script>
 </head>
 <body class="reader-body">
   <a class="skip" href="#comic-pages">Skip to comic</a>
-  <header class="reader-header"><a class="reader-home" href="./#chapters" aria-label="Back to all chapters"><span aria-hidden="true">←</span><img src="assets/crest.svg" alt="" width="25" height="30"><span>Malfoid Reader</span></a><div class="reader-heading"><label class="sr-only" for="chapter-select">Choose chapter</label><select id="chapter-select"></select></div><a id="original-chapter" class="reader-story-link" target="_blank" rel="noopener noreferrer">Original story <span aria-hidden="true">↗</span></a></header>
+  <header class="reader-header"><a class="reader-home" id="reader-home" href="./" aria-label="Back to all chapters"><span aria-hidden="true">←</span><img src="assets/crest.svg" alt="" width="25" height="30"><span id="reader-comic-name">Malfoid Reader</span></a><div class="reader-heading"><label class="sr-only" for="chapter-select">Choose chapter</label><select id="chapter-select"></select></div><a id="original-chapter" class="reader-story-link" target="_blank" rel="noopener noreferrer">Original story <span aria-hidden="true">↗</span></a></header>
   <main>
     <div class="reader-tools"><div class="mode-switch" role="group" aria-label="Reading mode"><button id="mode-page" aria-pressed="true">Page</button><button id="mode-scroll" aria-pressed="false">Scroll</button></div><p class="reader-hint" id="reader-hint">Click the page to enlarge</p><button id="theme-toggle" class="quiet-button" aria-label="Switch to light background">Light background <span aria-hidden="true">◐</span></button></div>
     <h1 class="sr-only" id="reader-title">Comic reader</h1>
     <div class="comic-pages" id="comic-pages" aria-label="Comic pages"></div>
-    <div class="reader-end" id="reader-end" hidden><p class="eyebrow">YOU’RE ALL CAUGHT UP</p><h2>Until the next chapter.</h2><p>More of the story is waiting on Wattpad.</p><a class="text-link" id="end-story" target="_blank" rel="noopener noreferrer">Read the original story ↗</a><a class="text-link" href="./#chapters">Back to the collection →</a></div>
+    <div class="reader-end" id="reader-end" hidden><p class="eyebrow">YOU’RE ALL CAUGHT UP</p><h2 id="end-heading">Until the next chapter.</h2><p id="end-description">Read ahead in the original story.</p><a class="text-link" id="end-story" target="_blank" rel="noopener noreferrer">Read the original story ↗</a><a class="text-link" id="end-chapters" href="./">Back to the chapters →</a><a class="text-link" href="./">All comics →</a></div>
     <noscript><p class="reader-error">JavaScript is needed for page navigation. Please enable it and reload.</p></noscript>
   </main>
   <nav class="page-navigation" aria-label="Comic page navigation"><button id="previous" class="nav-button"><span aria-hidden="true">←</span><span class="nav-word">Previous</span></button><div class="page-picker"><label class="sr-only" for="page-select">Choose page</label><select id="page-select"></select><span id="page-total"></span></div><button id="next" class="nav-button"><span class="nav-word">Next</span><span aria-hidden="true">→</span></button></nav>
