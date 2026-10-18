@@ -11,6 +11,8 @@ Original stories are linked; their full text is not included. Chinese editions, 
 
 `site/` contains a complete static website. The homepage lists comics; `comic.html?comic=<id>` displays the selected comic and its chapters; `reader.html` opens its pages. Reading progress is saved independently for each comic. Page-by-page and scrolling reading, full-size enlargement, and light/dark backgrounds are supported.
 
+Each image has a compact caption with its chapter, original post part, and page number on the left, and **Original post on X** on the right. The link opens the corresponding artwork post in a new tab. Scrolling mode keeps only a narrow caption strip and a small gap between images.
+
 Existing Draconia reader links without a `comic` parameter keep working, including their page numbers and original reading progress. Draconia page asset paths are preserved.
 
 Published images are WebP quality 92 at the original 1024 × 1536 dimensions. Only the small chapter-list thumbnails are resized. Source PNGs remain in the local comic project and are not uploaded.
@@ -21,6 +23,7 @@ There is no scheduled scraping, scheduled publishing, or automatic content synch
 
 1. Keep approved English comic pages in their existing project and chapter folders.
 2. Edit the selected comic in `catalog.source.json` to set its last approved page or add a chapter. To add another comic, add a separate entry with its own source folder, asset prefix, credits, and original-story link. This explicit list controls what becomes public; the exporter never discovers drafts automatically.
+   Add the matching artwork posts to the chapter's `posts` list: each entry has a Roman-numeral `part`, `firstPage`, `lastPage`, and the artist's exact X post `url`. Page zero means the cover; body pages start at one even for a comic without a cover. Ranges must cover every published image exactly once. The builder rejects missing or overlapping mappings. Post links are curated manually; building never fetches X or adds new pages automatically.
 3. Install Pillow if needed: `python3 -m pip install -r requirements.txt`.
 4. Run `python3 scripts/build.py --library-root "/absolute/path/to/novels"`. The library root is the folder containing the separate Draconia and Year 4 projects. The default matches the current local folder layout.
 5. Run `python3 scripts/verify.py`.

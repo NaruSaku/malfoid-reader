@@ -5,11 +5,31 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+import re
 import sys
 
 from PIL import Image, ImageOps
 
 REPO = Path(__file__).resolve().parent.parent
+
+
+def page_posts(chapter):
+    """Resolve manually curated post ranges, including page zero for a cover."""
+    first = 0 if chapter.get('cover') else 1
+    expected = set(range(first, chapter['lastPage'] + 1))
+    result = {}
+    for post in chapter['posts']:
+        if not re.fullmatch(r'https://x\.com/wanruochenhun/status/[0-9]+', post['url']):
+            raise ValueError(f'Invalid original artwork post: {post["url"]}')
+        if not re.fullmatch(r'[IVXLCDM]+', post['part']):
+            raise ValueError('A post part must be a Roman numeral.')
+        numbers = set(range(post['firstPage'], post['lastPage'] + 1))
+        if not numbers or not numbers <= expected or numbers & result.keys():
+            raise ValueError(f'Overlapping or invalid original-post range: {chapter["id"]}')
+        result.update({number: post for number in numbers})
+    if result.keys() != expected:
+        raise ValueError(f'Every published page needs its corresponding original post: {chapter["id"]}')
+    return result
 
 
 def main():
@@ -41,6 +61,7 @@ def main():
                 raise ValueError(f'Not an approved English source directory: {directory}')
             if item['lastPage'] < 1:
                 raise ValueError('A chapter must contain at least one approved page.')
+            posts = page_posts(item)
             prefix = Path('comics') / comic['assetPrefix'] / item['id']
             pages, entries = [], []
             if item.get('cover'):
@@ -64,7 +85,10 @@ def main():
                 stat = source.stat()
                 signature = f'{source}:{stat.st_size}:{stat.st_mtime_ns}:{quality}:v1'
                 jobs.append((source, target, signature, False))
-                pages.append({'src': relative, 'label': 'Cover' if number == 0 else f'Page {number}', 'number': number})
+                pages.append({
+                    'src': relative, 'label': 'Cover' if number == 0 else f'Page {number}', 'number': number,
+                    'originalPost': posts[number]['url'], 'postPart': posts[number]['part']
+                })
             thumb = (prefix / 'thumbnail.webp').as_posix()
             target = site / thumb
             expected.add(target)
