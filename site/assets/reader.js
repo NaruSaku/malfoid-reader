@@ -13,10 +13,19 @@
   let pageIndex = 0;
   let mode = readStorage('malfoid.mode', 'page') === 'scroll' ? 'scroll' : 'page';
   let scrollFrame = 0;
-  let renderVersion = 0;
+  let scrollTrackingAfter = 0;
   const chapterSelect = $('#chapter-select');
   const pageSelect = $('#page-select');
   const chapter = () => data.chapters[chapterIndex];
+  const scrollToCurrentPage = () => {
+    const target = document.querySelector(`#comic-page-${pageIndex}`);
+    if (!target) return;
+    // Ignore delayed scroll events from a deliberate page jump or mode change.
+    scrollTrackingAfter = performance.now() + 400;
+    const headerHeight = document.querySelector('.reader-header').getBoundingClientRect().bottom;
+    const toolsHeight = document.querySelector('.reader-tools').getBoundingClientRect().height;
+    window.scrollTo({ top: window.scrollY + target.getBoundingClientRect().top - headerHeight - toolsHeight - 12, behavior: 'instant' });
+  };
 
   data.chapters.forEach(item => {
     const option = document.createElement('option');
@@ -93,7 +102,6 @@
     return figure;
   };
   const render = (scrollToPage = true) => {
-    const version = ++renderVersion;
     cancelAnimationFrame(scrollFrame);
     chapterSelect.value = chapter().id;
     $('#reader-title').textContent = `Chapter ${chapter().number}: ${chapter().title}`;
@@ -120,10 +128,7 @@
       }
     } else {
       chapter().pages.forEach((_, index) => container.append(makePage(index)));
-      scrollFrame = requestAnimationFrame(() => {
-        if (version !== renderVersion) return;
-        if (scrollToPage) document.querySelector(`#comic-page-${pageIndex}`).scrollIntoView({ block: 'start' });
-      });
+      if (scrollToPage) scrollToCurrentPage();
     }
     updateNavigation();
   };
@@ -133,7 +138,7 @@
     chapterIndex = targetChapter;
     pageIndex = Math.max(0, Math.min(targetPage, chapter().pages.length - 1));
     if (mode === 'scroll' && sameChapter) {
-      document.querySelector(`#comic-page-${pageIndex}`).scrollIntoView({ behavior: 'instant', block: 'start' });
+      scrollToCurrentPage();
       updateNavigation();
     } else render();
   };
@@ -167,11 +172,11 @@
   });
   window.addEventListener('popstate', () => { applyLocation(); render(); });
   window.addEventListener('scroll', () => {
-    if (mode !== 'scroll') return;
+    if (mode !== 'scroll' || performance.now() < scrollTrackingAfter) return;
     cancelAnimationFrame(scrollFrame);
     scrollFrame = requestAnimationFrame(() => {
-      if (mode !== 'scroll') return;
-      const readingLine = document.querySelector('.reader-header').getBoundingClientRect().bottom + 45;
+      if (mode !== 'scroll' || performance.now() < scrollTrackingAfter) return;
+      const readingLine = document.querySelector('.reader-tools').getBoundingClientRect().bottom + 35;
       const figures = [...container.querySelectorAll('.comic-figure')];
       const active = figures.find(figure => figure.getBoundingClientRect().bottom > readingLine) || figures.at(-1);
       if (!active) return;
@@ -182,5 +187,5 @@
   setTheme(readStorage('malfoid.theme', 'dark'));
   applyLocation();
   render(false);
-  if (mode === 'scroll' && pageIndex > 0) document.querySelector(`#comic-page-${pageIndex}`).scrollIntoView({ block: 'start' });
+  if (mode === 'scroll' && pageIndex > 0) scrollToCurrentPage();
 })();
