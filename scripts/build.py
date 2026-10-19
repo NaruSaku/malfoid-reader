@@ -14,13 +14,16 @@ REPO = Path(__file__).resolve().parent.parent
 
 
 def page_posts(chapter):
-    """Resolve manually curated post ranges, including page zero for a cover."""
+    """Resolve curated ranges; explicitly pending URLs stay absent until supplied."""
     first = 0 if chapter.get('cover') else 1
     expected = set(range(first, chapter['lastPage'] + 1))
     result = {}
     for post in chapter['posts']:
-        if not re.fullmatch(r'https://x\.com/wanruochenhun/status/[0-9]+', post['url']):
-            raise ValueError(f'Invalid original artwork post: {post["url"]}')
+        if post.get('pending') is True:
+            if post.get('url') is not None:
+                raise ValueError('A pending original post must have a null URL.')
+        elif not isinstance(post.get('url'), str) or not re.fullmatch(r'https://x\.com/wanruochenhun/status/[0-9]+', post['url']):
+            raise ValueError(f'Invalid original artwork post: {post.get("url")}')
         if not re.fullmatch(r'[IVXLCDM]+', post['part']):
             raise ValueError('A post part must be a Roman numeral.')
         numbers = set(range(post['firstPage'], post['lastPage'] + 1))
@@ -28,7 +31,7 @@ def page_posts(chapter):
             raise ValueError(f'Overlapping or invalid original-post range: {chapter["id"]}')
         result.update({number: post for number in numbers})
     if result.keys() != expected:
-        raise ValueError(f'Every published page needs its corresponding original post: {chapter["id"]}')
+        raise ValueError(f'Every published page needs a confirmed or explicitly pending post range: {chapter["id"]}')
     return result
 
 

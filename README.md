@@ -2,7 +2,7 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, and 2.1**, with 137 comic pages and four covers.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, and 2.2**, with 172 comic pages and five covers.
 - **Year 4**, featuring Lyra Malfoy, based on the [one-shot by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): the complete latest **nine-page** English edition.
 
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.
@@ -11,7 +11,7 @@ Original stories are linked; their full text is not included. Chinese editions, 
 
 `site/` contains a complete static website. The homepage lists comics; `comic.html?comic=<id>` displays the selected comic and its chapters; `reader.html` opens its pages. Reading progress is saved independently for each comic. Page-by-page and scrolling reading, full-size enlargement, and light/dark backgrounds are supported.
 
-Each image has a compact caption with its chapter and page number on the left, and **Original post on X** on the right. The link opens the corresponding artwork post in a new tab. Scrolling mode keeps only a narrow caption strip and a small gap between images.
+Each image has a compact caption with its chapter and page number on the left, and **Original post on X** on the right when the exact post is known. The link opens the corresponding artwork post in a new tab. Pages awaiting a post URL remain readable and omit that link. Scrolling mode keeps only a narrow caption strip and a small gap between images.
 
 Existing Draconia reader links without a `comic` parameter keep working, including their page numbers and original reading progress. Draconia page asset paths are preserved.
 
@@ -23,7 +23,7 @@ There is no scheduled scraping, scheduled publishing, or automatic content synch
 
 1. Keep approved English comic pages in their existing project and chapter folders.
 2. Edit the selected comic in `catalog.source.json` to set its last approved page or add a chapter. To add another comic, add a separate entry with its own source folder, asset prefix, credits, and original-story link. This explicit list controls what becomes public; the exporter never discovers drafts automatically.
-   Add the matching artwork posts to the chapter's `posts` list: each entry has a Roman-numeral `part`, `firstPage`, `lastPage`, and the artist's exact X post `url`. Page zero means the cover; body pages start at one even for a comic without a cover. Ranges must cover every published image exactly once. The builder rejects missing or overlapping mappings. Post links are curated manually; building never fetches X or adds new pages automatically.
+   Add the matching artwork posts to the chapter's `posts` list: each entry has a Roman-numeral `part`, `firstPage`, `lastPage`, and the artist's exact X post `url`. Page zero means the cover; body pages start at one even for a comic without a cover. Ranges must cover every published image exactly once. If the artist authorizes publishing before a URL is available, mark only those ranges with `"url": null, "pending": true`; their pages omit the X link. Once verified, replace null with the exact URL and remove `pending`, rebuild and manually publish. The builder rejects unmarked missing URLs and overlapping mappings. Post links are curated manually; building never fetches X or adds new pages automatically.
 3. Install Pillow if needed: `python3 -m pip install -r requirements.txt`.
 4. Run `python3 scripts/build.py --library-root "/absolute/path/to/novels"`. The library root is the folder containing the separate Draconia and Year 4 projects. The default matches the current local folder layout.
 5. Run `python3 scripts/verify.py`.

@@ -116,14 +116,17 @@
     const chapterLabel = data.id === 'year-4' ? data.shortTitle : `Chapter ${chapter().number}`;
     const pageLabel = page.number === 0 ? 'Cover' : `p. ${page.number}`;
     label.textContent = `${chapterLabel} · ${pageLabel}`;
-    const original = document.createElement('a');
-    original.className = 'original-post-link';
-    original.href = page.originalPost;
-    original.textContent = 'Original post on X ↗';
-    original.target = '_blank';
-    original.rel = 'noopener noreferrer';
-    original.setAttribute('aria-label', `Original post on X for ${page.label.toLowerCase()} (opens in a new tab)`);
-    caption.append(label, original);
+    caption.append(label);
+    if (page.originalPost) {
+      const original = document.createElement('a');
+      original.className = 'original-post-link';
+      original.href = page.originalPost;
+      original.textContent = 'Original post on X ↗';
+      original.target = '_blank';
+      original.rel = 'noopener noreferrer';
+      original.setAttribute('aria-label', `Original post on X for ${page.label.toLowerCase()} (opens in a new tab)`);
+      caption.append(original);
+    }
     figure.append(button, caption);
     return figure;
   };

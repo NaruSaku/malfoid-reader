@@ -291,6 +291,77 @@
               "url": "https://x.com/wanruochenhun/status/2111272350763405371"
             }
           ]
+        },
+        {
+          "id": "chapter-2-2",
+          "number": "2.2",
+          "title": "The Forest",
+          "source": "漫画制作/第2.2章",
+          "cover": "封面_英文版.png",
+          "lastPage": 35,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "An illicit dragon. A night in the Forbidden Forest. A secret she cannot forget.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1661365634",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 3,
+              "url": "https://x.com/wanruochenhun/status/2111299951863226545"
+            },
+            {
+              "part": "II",
+              "firstPage": 4,
+              "lastPage": 7,
+              "url": "https://x.com/wanruochenhun/status/2111482996671103259"
+            },
+            {
+              "part": "III",
+              "firstPage": 8,
+              "lastPage": 11,
+              "url": "https://x.com/wanruochenhun/status/2111505734349549959"
+            },
+            {
+              "part": "IV",
+              "firstPage": 12,
+              "lastPage": 15,
+              "url": "https://x.com/wanruochenhun/status/2111557255174955016"
+            },
+            {
+              "part": "V",
+              "firstPage": 16,
+              "lastPage": 19,
+              "url": "https://x.com/wanruochenhun/status/2111616098781339677"
+            },
+            {
+              "part": "VI",
+              "firstPage": 20,
+              "lastPage": 23,
+              "url": null,
+              "pending": true
+            },
+            {
+              "part": "VII",
+              "firstPage": 24,
+              "lastPage": 27,
+              "url": null,
+              "pending": true
+            },
+            {
+              "part": "VIII",
+              "firstPage": 28,
+              "lastPage": 31,
+              "url": null,
+              "pending": true
+            },
+            {
+              "part": "IX",
+              "firstPage": 32,
+              "lastPage": 35,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
