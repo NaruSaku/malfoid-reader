@@ -48,6 +48,14 @@ Statistics start after installation and publication; earlier visits cannot be re
 
 Cloudflare Web Analytics was enabled on all three page types on October 18, 2026. View the reports in your Cloudflare account under **Observability → Analytics → Web analytics → narusaku.github.io**. The dashboard is private to your account. Changing the token requires running the configuration helper and manually publishing again.
 
+## Reader comments
+
+Comments and reactions use [giscus](https://giscus.app/) and the repository's GitHub Discussions. Reading comments does not require an account; posting requires signing in with GitHub. Each comic's introduction page has a general conversation, and each chapter has its own conversation at the bottom of scrolling mode or after its last page in page mode. Different comics and chapters are kept separate; changing pages or reading mode within a chapter keeps the same discussion.
+
+Public widget settings live in `site/comments.config.js`. Stable discussion keys use the comic/chapter IDs, rather than page URLs or titles. Strict matching prevents similarly named chapters from sharing comments. The iframe loads near the comment section, follows the reading background, and offers a GitHub link if it cannot load. `giscus.json` restricts allowed embedding origins to this site, the giscus configurator, and the local preview. Moderation is done in the repository's **Discussions** tab.
+
+The giscus GitHub App needs metadata read access and Discussions read/write access for `NaruSaku/malfoid-reader`. No personal access token is placed in the website. New discussion threads are created by giscus when the first reader leaves a comment or reaction; installation testing should not post sample comments.
+
 ## Credits
 
 This is a noncommercial, AI-assisted Harry Potter fan comic adaptation. Artwork and story credits remain with their respective creators. No general reuse license is granted by this repository.

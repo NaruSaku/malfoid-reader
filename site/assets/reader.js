@@ -68,6 +68,7 @@
     $('#previous').disabled = chapterIndex === 0 && pageIndex === 0;
     $('#next').disabled = chapterIndex === data.chapters.length - 1 && pageIndex === current.pages.length - 1;
     $('#reader-end').hidden = !(chapterIndex === data.chapters.length - 1 && (mode === 'scroll' || pageIndex === current.pages.length - 1));
+    window.ReaderComments?.show({ comic: data, chapter: current, visible: mode === 'scroll' || pageIndex === current.pages.length - 1 });
     $('#page-announcement').textContent = `Chapter ${current.number}, ${current.pages[pageIndex].label}`;
     document.title = `${current.pages[pageIndex].label} · ${data.shortTitle} · Chapter ${current.number} — Malfoid Reader`;
     save();

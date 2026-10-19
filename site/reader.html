@@ -7,10 +7,12 @@
   <meta name="description" content="Read the English Malfoid comic by Crepuscule3307 in chapter order.">
   <title>Read — Malfoid Reader</title>
   <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=3">
+  <link rel="stylesheet" href="assets/style.css?v=5">
   <script src="catalog.js?v=3" defer></script>
   <script src="assets/shared.js?v=3" defer></script>
-  <script src="assets/reader.js?v=4" defer></script>
+  <script src="comments.config.js?v=1" defer></script>
+  <script src="assets/comments.js?v=3" defer></script>
+  <script src="assets/reader.js?v=5" defer></script>
 </head>
 <body class="reader-body">
   <a class="skip" href="#comic-pages">Skip to comic</a>
@@ -20,6 +22,17 @@
     <h1 class="sr-only" id="reader-title">Comic reader</h1>
     <div class="comic-pages" id="comic-pages" aria-label="Comic pages"></div>
     <div class="reader-end" id="reader-end" hidden><p class="eyebrow">YOU’RE ALL CAUGHT UP</p><h2 id="end-heading">Until the next chapter.</h2><p id="end-description">Read ahead in the original story.</p><a class="text-link" id="end-story" target="_blank" rel="noopener noreferrer">Read the original story ↗</a><a class="text-link" id="end-chapters" href="./">Back to the chapters →</a><a class="text-link" href="./">All comics →</a></div>
+    <section class="comments-section" id="comments" aria-labelledby="comments-title" hidden>
+      <p class="eyebrow">THE CONVERSATION</p>
+      <h2 id="comments-title">Reader comments</h2>
+      <p class="comments-context"></p>
+      <p class="comments-description"></p>
+      <p class="comments-note">Read comments freely. Sign in with GitHub to leave a comment or reaction.</p>
+      <p class="comments-status" role="status" aria-live="polite"></p>
+      <button class="comments-load nav-button" type="button">Load comments</button>
+      <div class="giscus"></div>
+      <a class="comments-github text-link" target="_blank" rel="noopener noreferrer">Open GitHub discussions ↗</a>
+    </section>
     <noscript><p class="reader-error">JavaScript is needed for page navigation. Please enable it and reload.</p></noscript>
   </main>
   <nav class="page-navigation" aria-label="Comic page navigation"><button id="previous" class="nav-button"><span aria-hidden="true">←</span><span class="nav-word">Previous</span></button><div class="page-picker"><label class="sr-only" for="page-select">Choose page</label><select id="page-select"></select><span id="page-total"></span></div><button id="next" class="nav-button"><span class="nav-word">Next</span><span aria-hidden="true">→</span></button></nav>

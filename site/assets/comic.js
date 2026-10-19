@@ -66,6 +66,7 @@
   $('#publication-note').textContent = data.complete ? `The complete comic · ${data.totalPages} pages.` : `Available through Chapter ${data.throughChapter}. More chapters will be added by the artist.`;
   $('#story-credit').textContent = `Read the original story by ${data.author.name}.`;
   $('#original-story').href = data.storyUrl;
+  window.ReaderComments?.show({ comic: data });
   const saved = library.progress(data.id);
   if (saved) {
     const chapter = data.chapters.find(item => item.id === saved.chapter);

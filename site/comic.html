@@ -7,10 +7,12 @@
   <meta name="description" content="Explore an English Malfoid comic and read its chapters in order.">
   <title>Comic — Malfoid Reader</title>
   <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=3">
+  <link rel="stylesheet" href="assets/style.css?v=5">
   <script src="catalog.js?v=3" defer></script>
   <script src="assets/shared.js?v=3" defer></script>
-  <script src="assets/comic.js?v=3" defer></script>
+  <script src="comments.config.js?v=1" defer></script>
+  <script src="assets/comments.js?v=3" defer></script>
+  <script src="assets/comic.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -23,6 +25,17 @@
     </section>
     <section class="library" id="chapters" aria-labelledby="chapters-title"><div class="section-heading"><div><p class="eyebrow">THE CHAPTERS</p><h2 id="chapters-title">One chapter at a time.</h2></div><p class="collection-note"><span id="story-setting"></span><span aria-hidden="true">/</span><span id="collection-count"></span></p></div><div class="chapter-grid" id="chapter-grid"></div><p class="publication-note"><span class="status-dot" aria-hidden="true"></span><span id="publication-note"></span></p></section>
     <section class="story-note" aria-labelledby="story-note-title"><span class="note-ornament" aria-hidden="true">✦</span><p class="eyebrow">BEHIND THE COMIC</p><h2 id="story-note-title">There is more between the lines.</h2><p id="story-credit"></p><a class="text-link" id="original-story" target="_blank" rel="noopener noreferrer">Visit the original story <span aria-hidden="true">↗</span></a></section>
+    <section class="comments-section" id="comments" aria-labelledby="comments-title" hidden>
+      <p class="eyebrow">THE CONVERSATION</p>
+      <h2 id="comments-title">Reader comments</h2>
+      <p class="comments-context"></p>
+      <p class="comments-description"></p>
+      <p class="comments-note">Read comments freely. Sign in with GitHub to leave a comment or reaction.</p>
+      <p class="comments-status" role="status" aria-live="polite"></p>
+      <button class="comments-load nav-button" type="button">Load comments</button>
+      <div class="giscus"></div>
+      <a class="comments-github text-link" target="_blank" rel="noopener noreferrer">Open GitHub discussions ↗</a>
+    </section>
     <noscript><p>Enable JavaScript to display this comic and its chapters. <a href="./">Back to all comics</a>.</p></noscript>
   </main>
   <footer class="site-footer"><a class="footer-wordmark" href="./">Malfoid Reader</a><p>AI-assisted comic adaptations by Crepuscule3307.<br>A noncommercial Harry Potter fan collection.</p><a href="https://x.com/wanruochenhun" target="_blank" rel="noopener noreferrer">Follow the artist <span aria-hidden="true">↗</span></a></footer>
