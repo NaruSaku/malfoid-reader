@@ -2,7 +2,7 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, and 2.2**, with 172 comic pages and five covers.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, and 2.3**, with 206 comic pages and six covers.
 - **Year 4**, featuring Lyra Malfoy, based on the [one-shot by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): the complete latest **nine-page** English edition.
 
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.

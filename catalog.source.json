@@ -362,6 +362,26 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "chapter-2-3",
+          "number": "2.3",
+          "title": "The House Cup",
+          "source": "漫画制作/第2.3章",
+          "cover": "封面_英文版.png",
+          "lastPage": 34,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "The House Cup changes hands. The year ends. Some things will never be the same.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1661370191",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 34,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
