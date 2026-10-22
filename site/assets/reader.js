@@ -48,16 +48,18 @@
     const params = new URLSearchParams(location.search);
     const found = data.chapters.findIndex(item => item.id === params.get('chapter'));
     chapterIndex = found < 0 ? 0 : found;
-    const requested = Number(params.get('page') || 0);
+    let requested = Number(params.get('page') || 0);
+    if (data.pageNumberingVersion === 2 && params.has('page') && params.get('edition') !== '2' && Number.isInteger(requested)) requested += 1;
     pageIndex = Number.isInteger(requested) ? Math.max(0, Math.min(requested, chapter().pages.length - 1)) : 0;
   };
   const save = () => {
-    const progress = JSON.stringify({ chapter: chapter().id, page: pageIndex });
+    const progress = JSON.stringify({ chapter: chapter().id, page: pageIndex, ...(data.pageNumberingVersion === 2 ? { edition: 2 } : {}) });
     writeStorage(`malfoid.progress.${data.id}`, progress);
     if (data.id === 'draconia') writeStorage('malfoid.progress', progress);
     const url = new URL(location.href);
     url.searchParams.set('chapter', chapter().id);
     url.searchParams.set('page', pageIndex);
+    if (data.pageNumberingVersion === 2) url.searchParams.set('edition', '2');
     if (data.id !== 'draconia' || url.searchParams.has('comic')) url.searchParams.set('comic', data.id);
     history.replaceState(null, '', url);
   };

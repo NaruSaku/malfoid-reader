@@ -438,7 +438,7 @@
           "number": "1",
           "title": "Flirt",
           "source": "漫画制作/Chapter1",
-          "cover": null,
+          "cover": "封面_英文彩色.png",
           "lastPage": 9,
           "filenamePattern": "第{page:02d}页_英文彩色.png",
           "pageSources": {
@@ -451,6 +451,13 @@
           "description": "A letter from Sirius sets a prank in motion, from the Hogwarts Express to the welcoming feast.",
           "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
           "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 0,
+              "url": null,
+              "pending": true
+            },
             {
               "part": "I",
               "firstPage": 1,
@@ -476,7 +483,7 @@
           "number": "9",
           "title": "Flirt",
           "source": "漫画制作/Chapter9/英文彩色漫画",
-          "cover": null,
+          "cover": "封面_英文彩色.png",
           "lastPage": 37,
           "filenamePattern": "第{page:02d}页_英文彩色.png",
           "pageSources": {
@@ -487,7 +494,7 @@
           "posts": [
             {
               "part": "I",
-              "firstPage": 1,
+              "firstPage": 0,
               "lastPage": 37,
               "url": null,
               "pending": true
@@ -496,7 +503,8 @@
         }
       ],
       "publicationLabel": "CHAPTERS 1 & 9",
-      "publicationNote": "Available chapters: 1 and 9. More chapters will be added by the artist."
+      "publicationNote": "Available chapters: 1 and 9. More chapters will be added by the artist.",
+      "pageNumberingVersion": 2
     }
   ]
 }

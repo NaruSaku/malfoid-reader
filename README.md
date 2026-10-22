@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, and 2.3**, with 206 comic pages and six covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1 and 9**, with **46 English comic pages**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 have not been added to this website.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1 and 9**, with **46 English comic pages and two chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 have not been added to this website.
 
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.
 
@@ -59,3 +59,5 @@ The giscus GitHub App needs metadata read access and Discussions read/write acce
 ## Credits
 
 This is a noncommercial, AI-assisted Harry Potter fan comic adaptation. Artwork and story credits remain with their respective creators. No general reuse license is granted by this repository.
+
+Flirt chapter covers were added on October22,2026. New links include `edition=2`; old body-page links and saved reading positions are translated once to preserve the same comic page after each cover was inserted. Body page numbering, artwork X links and discussion keys are unchanged.
