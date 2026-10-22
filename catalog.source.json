@@ -382,6 +382,26 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "chapter-2-4",
+          "number": "2.4",
+          "title": "Her Father Counted",
+          "source": "漫画制作/第2.4章",
+          "cover": "封面_英文版.png",
+          "lastPage": 36,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "A father counts mentions of Harry Potter, remembers the daughter who changed his plans, and makes a few new ones.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1662250083",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 36,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
