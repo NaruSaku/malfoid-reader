@@ -21,7 +21,7 @@
     const copy = document.createElement('div'); copy.className = 'comic-entry-copy';
     const meta = document.createElement('p');
     meta.className = 'comic-status';
-    meta.textContent = comic.complete ? 'COMPLETE ONE-SHOT' : `THROUGH CHAPTER ${comic.throughChapter}`;
+    meta.textContent = comic.publicationLabel || (comic.complete ? 'COMPLETE ONE-SHOT' : `THROUGH CHAPTER ${comic.throughChapter}`);
     const title = document.createElement('h2');
     title.textContent = comic.title;
     copy.append(meta, title);

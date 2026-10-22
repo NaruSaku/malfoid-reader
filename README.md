@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, and 2.3**, with 206 comic pages and six covers.
-- **Year 4**, featuring Lyra Malfoy, based on the [one-shot by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): the complete latest **nine-page** English edition.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1 and 9**, with **46 English comic pages**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 have not been added to this website.
 
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.
 
@@ -15,7 +15,7 @@ Each image has a compact caption with its chapter and page number on the left, a
 
 Existing Draconia reader links without a `comic` parameter keep working, including their page numbers and original reading progress. Draconia page asset paths are preserved.
 
-Published images are WebP quality 92 at the original 1024 × 1536 dimensions. Only the small chapter-list thumbnails are resized. Source PNGs remain in the local comic project and are not uploaded.
+Published images are WebP quality 92 at 1024 × 1536. Larger approved 2:3 images are reduced proportionally to this reading size. Only the small chapter-list thumbnails are resized. Source PNGs remain in the local comic project and are not uploaded.
 
 ## Manual updates
 
@@ -32,7 +32,7 @@ There is no scheduled scraping, scheduled publishing, or automatic content synch
 
 The exporter requires Python 3.9+ and Pillow. On this Mac, the Codex bundled Python can run the exporter without installing additional packages.
 
-Year 4 uses original pages 1–4 followed by the latest English pages 5–9 in `中文原图对应版_第05-09页/`. These are English comic images despite the source-folder name. The old twelve-page edition is not part of the current reading sequence. Exact page overrides are recorded in `pageSources`.
+Flirt Chapter 1 uses original pages 1–4 followed by the latest English pages 5–9 in `中文原图对应版_第05-09页/`. These are English comic images despite the source-folder name. The old twelve-page edition is not part of the current reading sequence. Exact page overrides are recorded in `pageSources`. Flirt Chapter 9 uses the final 37-page sequence in `Year 4/漫画制作/Chapter9/英文彩色漫画/`; page 24 is the approved JPG. The stable `year-4` comic ID, asset paths, reading progress, and comment keys are retained after the rename. New chapter X artwork links are pending and omitted until verified. The original-story link remains the existing DodgerWing source link.
 
 ## Local preview
 

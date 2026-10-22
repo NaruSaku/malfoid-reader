@@ -113,7 +113,7 @@
     });
     const caption = document.createElement('figcaption');
     const label = document.createElement('span');
-    const chapterLabel = data.id === 'year-4' ? data.shortTitle : `Chapter ${chapter().number}`;
+    const chapterLabel = `Chapter ${chapter().number}`;
     const pageLabel = page.number === 0 ? 'Cover' : `p. ${page.number}`;
     label.textContent = `${chapterLabel} · ${pageLabel}`;
     caption.append(label);

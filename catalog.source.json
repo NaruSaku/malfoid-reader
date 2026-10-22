@@ -408,13 +408,13 @@
     },
     {
       "id": "year-4",
-      "title": "Year 4",
-      "shortTitle": "Year 4",
+      "title": "Flirt",
+      "shortTitle": "Flirt",
       "tagline": "Lyra Malfoy",
       "sourceRoot": "Year 4",
       "assetPrefix": "year-4",
       "setting": "Year Four",
-      "complete": true,
+      "complete": false,
       "artist": {
         "name": "Crepuscule3307",
         "url": "https://x.com/wanruochenhun"
@@ -428,10 +428,7 @@
       "heroDescription": "A letter from Sirius. A box of chocolates. A plan that works a little too well.",
       "headingLines": [
         {
-          "text": "Year 4"
-        },
-        {
-          "text": "Lyra Malfoy",
+          "text": "Flirt",
           "emphasis": true
         }
       ],
@@ -439,7 +436,7 @@
         {
           "id": "year4-chapter-1",
           "number": "1",
-          "title": "Year 4",
+          "title": "Flirt",
           "source": "漫画制作/Chapter1",
           "cover": null,
           "lastPage": 9,
@@ -451,7 +448,7 @@
             "8": "中文原图对应版_第05-09页/第08页_英文彩色.png",
             "9": "中文原图对应版_第05-09页/第09页_英文彩色.png"
           },
-          "description": "The complete Lyra Malfoy one-shot, from the Hogwarts Express to the welcoming feast.",
+          "description": "A letter from Sirius sets a prank in motion, from the Hogwarts Express to the welcoming feast.",
           "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
           "posts": [
             {
@@ -473,8 +470,33 @@
               "url": "https://x.com/wanruochenhun/status/2110814783696203935"
             }
           ]
+        },
+        {
+          "id": "year4-chapter-9",
+          "number": "9",
+          "title": "Flirt",
+          "source": "漫画制作/Chapter9/英文彩色漫画",
+          "cover": null,
+          "lastPage": 37,
+          "filenamePattern": "第{page:02d}页_英文彩色.png",
+          "pageSources": {
+            "24": "第24页_英文彩色.jpg"
+          },
+          "description": "A race above Hogsmeade. An unexpected kiss. A wager finally settled.",
+          "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 1,
+              "lastPage": 37,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
-      ]
+      ],
+      "publicationLabel": "CHAPTERS 1 & 9",
+      "publicationNote": "Available chapters: 1 and 9. More chapters will be added by the artist."
     }
   ]
 }

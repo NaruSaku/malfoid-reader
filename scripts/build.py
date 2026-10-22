@@ -120,7 +120,10 @@ def main():
             original.load()
             image = ImageOps.exif_transpose(original).convert('RGB')
             if not thumbnail and image.size != (1024, 1536):
-                raise ValueError(f'Unexpected comic dimensions {image.size}: {source}')
+                if image.width >= 1024 and image.height >= 1536 and image.width * 3 == image.height * 2:
+                    image = image.resize((1024, 1536), Image.Resampling.LANCZOS)
+                else:
+                    raise ValueError(f'Unexpected comic dimensions {image.size}: {source}')
             if thumbnail:
                 image.thumbnail((480, 720), Image.Resampling.LANCZOS)
             temporary = target.with_suffix('.tmp')

@@ -37,7 +37,7 @@
   $('#hero-art').setAttribute('aria-label', `Read ${data.title}`);
   $('#hero-image').src = data.preview;
   $('#hero-image').alt = `${data.title}, ${first.hasCover ? 'cover' : 'first comic page'}`;
-  $('#art-caption').textContent = first.hasCover ? 'EVERY STORY HAS A FIRST CHAPTER' : `THE COMPLETE ${data.totalPages}-PAGE COMIC`;
+  $('#art-caption').textContent = first.hasCover ? 'EVERY STORY HAS A FIRST CHAPTER' : (data.complete ? `THE COMPLETE ${data.totalPages}-PAGE COMIC` : `${data.totalPages} COMIC PAGES · ${data.chapters.length} CHAPTERS`);
   if (data.complete) $('#chapters-title').textContent = 'The complete story.';
   const grid = $('#chapter-grid');
   if (data.chapters.length === 1) grid.classList.add('single-chapter');
@@ -63,7 +63,7 @@
   });
   $('#story-setting').textContent = data.setting.toUpperCase();
   $('#collection-count').textContent = `${data.chapters.length} ${data.chapters.length === 1 ? 'CHAPTER' : 'CHAPTERS'}`;
-  $('#publication-note').textContent = data.complete ? `The complete comic · ${data.totalPages} pages.` : `Available through Chapter ${data.throughChapter}. More chapters will be added by the artist.`;
+  $('#publication-note').textContent = data.publicationNote || (data.complete ? `The complete comic · ${data.totalPages} pages.` : `Available through Chapter ${data.throughChapter}. More chapters will be added by the artist.`);
   $('#story-credit').textContent = `Read the original story by ${data.author.name}.`;
   $('#original-story').href = data.storyUrl;
   window.ReaderComments?.show({ comic: data });
