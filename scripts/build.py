@@ -66,6 +66,10 @@ def main():
                 raise ValueError('A chapter must contain at least one approved page.')
             posts = page_posts(item)
             prefix = Path('comics') / comic['assetPrefix'] / item['id']
+            cover_revision = item.get('coverRevision', '')
+            if cover_revision and not re.fullmatch(r'[0-9a-f]{8}', cover_revision):
+                raise ValueError('A cover revision must be eight lowercase hexadecimal characters.')
+            cover_suffix = f'-{cover_revision}' if cover_revision else ''
             pages, entries = [], []
             if item.get('cover'):
                 entries.append((0, item['cover']))
@@ -82,7 +86,7 @@ def main():
                 if not source.is_file():
                     raise FileNotFoundError(f'Approved page is missing: {source}')
                 first_source = first_source or source
-                relative = (prefix / ('cover.webp' if number == 0 else f'{number:03d}.webp')).as_posix()
+                relative = (prefix / (f'cover{cover_suffix}.webp' if number == 0 else f'{number:03d}.webp')).as_posix()
                 target = site / relative
                 expected.add(target)
                 stat = source.stat()
@@ -92,7 +96,7 @@ def main():
                     'src': relative, 'label': 'Cover' if number == 0 else f'Page {number}', 'number': number,
                     'originalPost': posts[number]['url'], 'postPart': posts[number]['part']
                 })
-            thumb = (prefix / 'thumbnail.webp').as_posix()
+            thumb = (prefix / f'thumbnail{cover_suffix}.webp').as_posix()
             target = site / thumb
             expected.add(target)
             stat = first_source.stat()

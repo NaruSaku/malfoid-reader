@@ -61,3 +61,5 @@ The giscus GitHub App needs metadata read access and Discussions read/write acce
 This is a noncommercial, AI-assisted Harry Potter fan comic adaptation. Artwork and story credits remain with their respective creators. No general reuse license is granted by this repository.
 
 Flirt chapter covers were added on October22,2026. New links include `edition=2`; old body-page links and saved reading positions are translated once to preserve the same comic page after each cover was inserted. Body page numbering, artwork X links and discussion keys are unchanged.
+
+The approved Flirt Chapter1 left-hand cover repair was saved on October22,2026. Its `coverRevision` selects versioned cover and thumbnail filenames so readers receive the corrected artwork without a stale cached image. The exporter retains this version on subsequent manual builds.
