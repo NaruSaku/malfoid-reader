@@ -86,7 +86,11 @@ def main():
                 if not source.is_file():
                     raise FileNotFoundError(f'Approved page is missing: {source}')
                 first_source = first_source or source
-                relative = (prefix / (f'cover{cover_suffix}.webp' if number == 0 else f'{number:03d}.webp')).as_posix()
+                page_revision = item.get('pageRevisions', {}).get(str(number), '')
+                if page_revision and not re.fullmatch(r'[0-9a-f]{8}', page_revision):
+                    raise ValueError('A page revision must be eight lowercase hexadecimal characters.')
+                page_suffix = f'-{page_revision}' if page_revision else ''
+                relative = (prefix / (f'cover{cover_suffix}.webp' if number == 0 else f'{number:03d}{page_suffix}.webp')).as_posix()
                 target = site / relative
                 expected.add(target)
                 stat = source.stat()

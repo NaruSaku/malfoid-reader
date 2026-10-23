@@ -381,7 +381,10 @@
               "url": null,
               "pending": true
             }
-          ]
+          ],
+          "pageRevisions": {
+            "19": "6f94549c"
+          }
         },
         {
           "id": "chapter-2-4",
