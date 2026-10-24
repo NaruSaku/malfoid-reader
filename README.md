@@ -2,7 +2,7 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, and 2.4**, with 242 comic pages and seven covers.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, and 3**, with 289 comic pages and eight covers.
 - **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1 and 9**, with **46 English comic pages and two chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 have not been added to this website.
 
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.
@@ -63,3 +63,5 @@ This is a noncommercial, AI-assisted Harry Potter fan comic adaptation. Artwork 
 Flirt chapter covers were added on October22,2026. New links include `edition=2`; old body-page links and saved reading positions are translated once to preserve the same comic page after each cover was inserted. Body page numbering, artwork X links and discussion keys are unchanged.
 
 The approved Flirt Chapter1 left-hand cover repair was saved on October22,2026. Its `coverRevision` selects versioned cover and thumbnail filenames so readers receive the corrected artwork without a stale cached image. The exporter retains this version on subsequent manual builds.
+
+Draconia Chapter3, The Catch, includes46 approved story pages, back cover47 and the independent chapter cover. Page35 uses the formal JPG. Its X artwork URLs are pending; the original chapter link comes from the locally archived Wattpad part1660851417.

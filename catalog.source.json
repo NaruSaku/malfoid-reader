@@ -405,13 +405,36 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "chapter-3",
+          "number": "3",
+          "title": "The Catch",
+          "source": "漫画制作/第3章",
+          "cover": "封面_英文版.png",
+          "lastPage": 47,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "pageSources": {
+            "35": "第35页_英文版.jpg"
+          },
+          "description": "A new school year. A dangerous Quidditch match. Harry makes a choice before he catches the Snitch.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1660851417",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 47,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
       "shortTitle": "Draconia",
       "sourceRoot": "德拉科妮娅·马尔福与那个对她说“不”的男孩",
       "assetPrefix": "",
-      "setting": "Year One",
+      "setting": "Years One & Two",
       "complete": false,
       "description": "A girl who had never been told no. A boy who changes that.",
       "heroDescription": "Some stories begin with a spell. This one begins with a girl who had never been told no.",
