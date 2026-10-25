@@ -547,10 +547,30 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "year4-chapter-13",
+          "number": "13",
+          "title": "Flirt",
+          "source": "漫画制作/Chapter13/英文彩色漫画",
+          "cover": "封面_英文彩色.png",
+          "lastPage": 26,
+          "filenamePattern": "第{page:02d}页_英文彩色.png",
+          "description": "Harry faces Lucius’s questions. Lyra makes her choice. A difficult conversation in the headmaster’s office.",
+          "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 26,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
-      "publicationLabel": "CHAPTERS 1 & 9",
-      "publicationNote": "Available chapters: 1 and 9. More chapters will be added by the artist.",
+      "publicationLabel": "CHAPTERS 1, 9 & 13",
+      "publicationNote": "Available chapters: 1, 9, and 13. More chapters will be added by the artist.",
       "pageNumberingVersion": 2
     }
   ]
