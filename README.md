@@ -2,7 +2,7 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, and 3**, with 289 comic pages and eight covers.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, and 3.1**, with 330 numbered comic pages and nine covers.
 - **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, and 13**, with **72 English comic pages and three chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
 
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.
@@ -67,3 +67,5 @@ The approved Flirt Chapter1 left-hand cover repair was saved on October22,2026. 
 Draconia Chapter3, The Catch, includes46 approved story pages, back cover47 and the independent chapter cover. Page35 uses the formal JPG. Its X artwork URLs are pending; the original chapter link comes from the locally archived Wattpad part1660851417.
 
 Flirt Chapter 13 includes the complete 26-page English sequence and its independent cover, published at the artist’s explicit request on October 25, 2026. Page 20 uses the approved facial revision, page 23 the artist’s selected image, and page 26 the latest END version. Missing X artwork links are pending. The chapter links to the existing original-story source.
+
+Draconia Chapter 3.1, Earmuffs, includes 40 story pages, back cover 41, and its independent chapter cover. Pages 24, 32, 34, and 35 use the latest approved revisions. X artwork links remain pending; the original chapter link uses part 1661375623 from the locally archived Wattpad source.

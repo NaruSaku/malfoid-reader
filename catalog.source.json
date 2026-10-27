@@ -428,6 +428,26 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "chapter-3-1",
+          "number": "3.1",
+          "title": "Earmuffs",
+          "source": "漫画制作/第3.1章",
+          "cover": "封面_英文版.png",
+          "lastPage": 41,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "A broken arm. A box of Sugar Quills. A pair of earmuffs, and the things left unsaid.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1661375623",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 41,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
