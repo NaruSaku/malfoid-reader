@@ -69,3 +69,5 @@ Draconia Chapter3, The Catch, includes46 approved story pages, back cover47 and 
 Flirt Chapter 13 includes the complete 26-page English sequence and its independent cover, published at the artist’s explicit request on October 25, 2026. Page 20 uses the approved facial revision, page 23 the artist’s selected image, and page 26 the latest END version. Missing X artwork links are pending. The chapter links to the existing original-story source.
 
 Draconia Chapter 3.1, Earmuffs, includes 40 story pages, back cover 41, and its independent chapter cover. Pages 24, 32, 34, and 35 use the latest approved revisions. X artwork links remain pending; the original chapter link uses part 1661375623 from the locally archived Wattpad source.
+
+Draconia’s `novelOnlyChapters` records original chapters confirmed by the artist as not adapted into comics. The directory places these notices in natural chapter order, only through the latest published comic chapter. Chapters 2.1b, 2.5, and 2.6 are currently marked; the notices link to the original novel and are excluded from comic counts, reader navigation, progress, and comments. The exporter preserves this metadata.

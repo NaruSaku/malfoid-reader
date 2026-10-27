@@ -470,6 +470,17 @@
           "text": "Who Said No",
           "emphasis": true
         }
+      ],
+      "novelOnlyChapters": [
+        {
+          "number": "2.1b"
+        },
+        {
+          "number": "2.5"
+        },
+        {
+          "number": "2.6"
+        }
       ]
     },
     {

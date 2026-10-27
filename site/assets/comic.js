@@ -41,7 +41,38 @@
   if (data.complete) $('#chapters-title').textContent = 'The complete story.';
   const grid = $('#chapter-grid');
   if (data.chapters.length === 1) grid.classList.add('single-chapter');
+  const chapterOrder = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
+  const compareChapterNumbers = (a, b) => chapterOrder.compare(String(a), String(b));
+  const comicNumbers = new Set(data.chapters.map(chapter => chapter.number));
+  const novelOnly = (data.novelOnlyChapters || [])
+    .filter(chapter => !comicNumbers.has(chapter.number) && compareChapterNumbers(chapter.number, data.throughChapter) <= 0)
+    .sort((a, b) => compareChapterNumbers(a.number, b.number));
+  const shownNovelOnly = new Set();
+  if (novelOnly.length) {
+    const guide = document.createElement('p');
+    guide.className = 'adaptation-guide';
+    guide.textContent = `Comic adaptations through Chapter ${data.throughChapter}. Chapters available only in the novel are marked below.`;
+    grid.before(guide);
+  }
   data.chapters.forEach(chapter => {
+    const preceding = novelOnly.filter(item => !shownNovelOnly.has(item.number) && compareChapterNumbers(item.number, chapter.number) < 0);
+    if (preceding.length) {
+      const gap = document.createElement('section');
+      gap.className = 'novel-only-chapters';
+      gap.id = `novel-only-${preceding[0].number.replaceAll('.', '-')}`;
+      gap.setAttribute('aria-label', 'Chapters not adapted into comics');
+      const heading = document.createElement('h3'); heading.textContent = 'Novel-only chapters';
+      const explanation = document.createElement('p'); explanation.textContent = 'These chapters have not been adapted into comics.';
+      const list = document.createElement('ul');
+      preceding.forEach(item => {
+        const entry = document.createElement('li');
+        const number = document.createElement('span'); number.textContent = `Chapter ${item.number}`;
+        const status = document.createElement('span'); status.className = 'adaptation-status'; status.textContent = 'Not adapted';
+        entry.append(number, status); list.append(entry); shownNovelOnly.add(item.number);
+      });
+      const original = document.createElement('a'); original.className = 'text-link'; original.href = data.storyUrl; original.target = '_blank'; original.rel = 'noopener noreferrer'; original.textContent = 'Read the original novel ↗';
+      gap.append(heading, explanation, list, original); grid.append(gap);
+    }
     const article = document.createElement('article');
     article.className = 'chapter-card';
     const link = document.createElement('a');
@@ -62,7 +93,7 @@
     grid.append(article);
   });
   $('#story-setting').textContent = data.setting.toUpperCase();
-  $('#collection-count').textContent = `${data.chapters.length} ${data.chapters.length === 1 ? 'CHAPTER' : 'CHAPTERS'}`;
+  $('#collection-count').textContent = `${data.chapters.length} ${novelOnly.length ? 'COMIC ' : ''}${data.chapters.length === 1 ? 'CHAPTER' : 'CHAPTERS'}`;
   $('#publication-note').textContent = data.publicationNote || (data.complete ? `The complete comic · ${data.totalPages} pages.` : `Available through Chapter ${data.throughChapter}. More chapters will be added by the artist.`);
   $('#story-credit').textContent = `Read the original story by ${data.author.name}.`;
   $('#original-story').href = data.storyUrl;
