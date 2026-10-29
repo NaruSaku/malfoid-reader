@@ -5,6 +5,8 @@ An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruo
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, and 3.1**, with 330 numbered comic pages and nine covers.
 - **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, and 13**, with **72 English comic pages and three chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
 
+- **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapter **1**, with **46 English comic pages and its chapter cover**.
+
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.
 
 ## Website
@@ -71,3 +73,5 @@ Flirt Chapter 13 includes the complete 26-page English sequence and its independ
 Draconia Chapter 3.1, Earmuffs, includes 40 story pages, back cover 41, and its independent chapter cover. Pages 24, 32, 34, and 35 use the latest approved revisions. X artwork links remain pending; the original chapter link uses part 1661375623 from the locally archived Wattpad source.
 
 Draconia’s `novelOnlyChapters` records original chapters confirmed by the artist as not adapted into comics. A separate section below the comic chapter grid lists these chapters in natural order, only through the latest published comic chapter. Chapters 2.1b, 2.5, and 2.6 are currently marked; the notices link to the original novel and are excluded from comic counts, reader navigation, progress, and comments. The exporter preserves this metadata.
+
+American Vacation Chapter 1 was published from the artist’s approved formal English files. Its cover uses the approved clear-face edition; pages 34 and 40 use the approved hand revisions, and pages 41, 45, and 46 use their saved final versions. The 2048×3072 cover is reduced proportionally to the website’s 1024×1536 reading size. New artwork X links are pending. The author’s original-story post is linked; no novel text is hosted.

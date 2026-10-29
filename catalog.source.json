@@ -603,6 +603,63 @@
       "publicationLabel": "CHAPTERS 1, 9 & 13",
       "publicationNote": "Available chapters: 1, 9, and 13. More chapters will be added by the artist.",
       "pageNumberingVersion": 2
+    },
+    {
+      "id": "american-vacation",
+      "title": "Harry Potter and the American Vacation",
+      "shortTitle": "American Vacation",
+      "artist": {
+        "name": "Crepuscule3307",
+        "url": "https://x.com/wanruochenhun"
+      },
+      "author": {
+        "name": "ShamashAran",
+        "url": "https://x.com/ShamashAran"
+      },
+      "storyUrl": "https://x.com/ShamashAran/status/2110889440096690327",
+      "sourceRoot": "Harry Potter and the American Vacation",
+      "assetPrefix": "american-vacation",
+      "setting": "A Family Holiday",
+      "complete": false,
+      "description": "Harry, Dracena, and their daughter Lily take a family holiday across the Atlantic. What could possibly go wrong?",
+      "heroDescription": "A family holiday. A flight over the Atlantic. And a very unfamiliar Muggle world.",
+      "publicationLabel": "CHAPTER 1",
+      "publicationNote": "Chapter 1 is available. More chapters will be added by the artist.",
+      "headingLines": [
+        {
+          "text": "Harry Potter"
+        },
+        {
+          "text": "and the",
+          "small": true
+        },
+        {
+          "text": "American Vacation",
+          "emphasis": true
+        }
+      ],
+      "chapters": [
+        {
+          "id": "american-vacation-chapter-1",
+          "number": "1",
+          "title": "Chapter One",
+          "source": "漫画制作/第一章",
+          "cover": "封面_英文版.png",
+          "lastPage": 46,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "A family flight across the Atlantic. Muggle paperwork. An unexpected incident in New York.",
+          "storyUrl": "https://x.com/ShamashAran/status/2110889440096690327",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 46,
+              "url": null,
+              "pending": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
