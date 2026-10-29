@@ -448,6 +448,26 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "chapter-3-2",
+          "number": "3.2",
+          "title": "Ron's List",
+          "source": "漫画制作/第3.2章",
+          "cover": "封面_英文版.png",
+          "lastPage": 34,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "Ron keeps a secret list of everything Malfoy has done.",
+          "storyUrl": "https://www.wattpad.com/story/416789252/part/1662264139",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 34,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
