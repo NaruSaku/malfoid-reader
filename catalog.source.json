@@ -468,6 +468,26 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "chapter-4",
+          "number": "4",
+          "title": "Scared, Potter?",
+          "source": "漫画制作/第4章",
+          "cover": "封面_英文版.png",
+          "lastPage": 55,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "A message on the wall. A challenge on the duelling stage. A first step toward understanding.",
+          "storyUrl": "https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 55,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
