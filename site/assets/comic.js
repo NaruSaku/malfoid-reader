@@ -60,7 +60,7 @@
     novelOnly.forEach(item => {
       const entry = document.createElement('li');
       const number = document.createElement('span'); number.textContent = `Chapter ${item.number}`;
-      const status = document.createElement('span'); status.className = 'adaptation-status'; status.textContent = item.status === 'skipped' ? 'Skipped' : 'Not adapted';
+      const status = document.createElement('span'); status.className = 'adaptation-status'; status.textContent = 'Not Adapted';
       entry.append(number, status); list.append(entry);
     });
     const original = document.createElement('a'); original.className = 'text-link'; original.href = data.storyUrl; original.target = '_blank'; original.rel = 'noopener noreferrer'; original.textContent = 'Read the original novel ↗';
