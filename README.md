@@ -2,7 +2,7 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, and 4**, with 419 numbered comic pages and eleven covers.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, and 4.1**, with 478 numbered comic pages and twelve covers.
 - **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, and 13**, with **72 English comic pages and three chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapter **1**, with **46 English comic pages and its chapter cover**.
@@ -79,3 +79,5 @@ American Vacation Chapter 1 was published from the artist’s approved formal En
 Draconia Chapter 3.2, Ron’s List, includes 33 story pages, back cover 34, and its independent red-and-gold chapter cover. All 35 formal source images match their approved SHA-256 records. Artwork X links remain pending; the original chapter link uses locally archived Wattpad part 1662264139.
 
 Draconia Chapter 4, Scared, Potter?, includes 54 story pages, back cover 55, and its independent chapter cover. The cover and pages 4, 12, 15, 19, 41, 42, and 55 match their latest approved save records. The original-story link points to the novel directory until its exact chapter URL is available. Artwork X links remain pending.
+
+Draconia Chapter 4.1, You Should Have Been Ours, includes 58 story pages, back cover 59, and its approved independent cover. Pages 16–20 use the saved Luna earring revisions, pages 28/31 use the approved narration revisions, pages 43–57 use the current map classroom artwork, and page 58 uses the approved left-aligned narration. Superseded trophy-room artwork is excluded. Original-story and artwork X chapter links are pending.
