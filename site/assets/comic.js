@@ -45,7 +45,7 @@
   const compareChapterNumbers = (a, b) => chapterOrder.compare(String(a), String(b));
   const comicNumbers = new Set(data.chapters.map(chapter => chapter.number));
   const novelOnly = (data.novelOnlyChapters || [])
-    .filter(chapter => !comicNumbers.has(chapter.number) && compareChapterNumbers(chapter.number, data.throughChapter) <= 0)
+    .filter(chapter => !comicNumbers.has(chapter.number) && (chapter.status === 'skipped' || compareChapterNumbers(chapter.number, data.throughChapter) <= 0))
     .sort((a, b) => compareChapterNumbers(a.number, b.number));
   if (novelOnly.length) {
     const section = document.createElement('section');
@@ -55,12 +55,12 @@
     const panel = document.createElement('div'); panel.className = 'novel-only-chapters';
     const heading = document.createElement('h2'); heading.id = 'novel-only-title'; heading.textContent = 'Novel-only chapters';
     const explanation = document.createElement('p');
-    explanation.textContent = `These chapters have not been adapted into comics. Listed through Chapter ${data.throughChapter}.`;
+    explanation.textContent = 'These original-novel chapters are not included in the comic adaptation.';
     const list = document.createElement('ul');
     novelOnly.forEach(item => {
       const entry = document.createElement('li');
       const number = document.createElement('span'); number.textContent = `Chapter ${item.number}`;
-      const status = document.createElement('span'); status.className = 'adaptation-status'; status.textContent = 'Not adapted';
+      const status = document.createElement('span'); status.className = 'adaptation-status'; status.textContent = item.status === 'skipped' ? 'Skipped' : 'Not adapted';
       entry.append(number, status); list.append(entry);
     });
     const original = document.createElement('a'); original.className = 'text-link'; original.href = data.storyUrl; original.target = '_blank'; original.rel = 'noopener noreferrer'; original.textContent = 'Read the original novel ↗';

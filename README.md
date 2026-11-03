@@ -81,3 +81,5 @@ Draconia Chapter 3.2, Ron’s List, includes 33 story pages, back cover 34, and 
 Draconia Chapter 4, Scared, Potter?, includes 54 story pages, back cover 55, and its independent chapter cover. The cover and pages 4, 12, 15, 19, 41, 42, and 55 match their latest approved save records. The original-story link points to the novel directory until its exact chapter URL is available. Artwork X links remain pending.
 
 Draconia Chapter 4.1, You Should Have Been Ours, includes 58 story pages, back cover 59, and its approved independent cover. Pages 16–20 use the saved Luna earring revisions, pages 28/31 use the approved narration revisions, pages 43–57 use the current map classroom artwork, and page 58 uses the approved left-aligned narration. Superseded trophy-room artwork is excluded. Original-story and artwork X chapter links are pending.
+
+Draconia novel Chapters 2.4a and 4.1b are explicitly marked Skipped in the separate Novel-only chapters section below all adapted comics. Explicitly skipped chapters stay visible even when their label follows the latest published comic chapter.
