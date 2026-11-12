@@ -726,10 +726,30 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "year4-chapter-15",
+          "number": "15",
+          "title": "Flirt",
+          "source": "漫画制作/Chapter15/英文彩色漫画",
+          "cover": "封面_英文彩色.png",
+          "lastPage": 19,
+          "filenamePattern": "第{page:02d}页_英文彩色.png",
+          "description": "Confessions beneath the Black Lake. A kiss, a promise, and a prank growing far too real.",
+          "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 19,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
-      "publicationLabel": "CHAPTERS 1, 9, 13 & 14",
-      "publicationNote": "Available chapters: 1, 9, 13, and 14. More chapters will be added by the artist.",
+      "publicationLabel": "CHAPTERS 1, 9, 13, 14 & 15",
+      "publicationNote": "Available chapters: 1, 9, 13, 14, and 15. More chapters will be added by the artist.",
       "pageNumberingVersion": 2
     },
     {

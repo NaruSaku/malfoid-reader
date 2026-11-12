@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, and 5**, with 609 numbered comic pages and fourteen covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, 13, and 14**, with **90 English comic pages and four chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, 13, 14, and 15**, with **109 English comic pages and five chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapter **1**, with **46 English comic pages and its chapter cover**.
 
@@ -89,3 +89,5 @@ Flirt Chapter 14 includes its independent approved cover and the complete 18-pag
 Draconia Chapter 4.2, Visiting Hours, includes all 54 numbered English pages and its approved independent cover. Source hashes match the saved approval records, including the latest Flint revision on page 32 and height revision on page 53. Original-story and artwork X chapter links are pending. Published at the artist’s explicit request on November 5, 2026.
 
 Draconia Chapter Five, Dementors, includes 76 story pages, back cover 77, and its approved independent movie-poster cover. All 78 source images match the formal approval records, including the approved hood continuity on pages 68–69 and silver phoenix on page 71. Separate unapproved revisions are excluded. Original-story and artwork X chapter links are pending. Published at the artist’s explicit request on November 9, 2026.
+
+Flirt Chapter 15 includes its approved independent cover and the complete 19-page English comic sequence. All 20 source images match the latest saved November 11 versions, including the page 16/18 revisions and the platinum-hair cover. Artwork X links are pending; the original-story link uses the existing author post. Published at the artist’s explicit request on November 11, 2026.
