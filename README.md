@@ -94,6 +94,8 @@ Flirt Chapter 15 includes its approved independent cover and the complete 19-pag
 
 ## Chapter likes
 
+Each chapter card also shows its shared like total beneath the cover, beside the chapter/page information. These read-only counts use the same API and stable chapter keys as the reader, refresh when readers return to the list, and do not create votes or browser identifiers. An unavailable count displays an em dash rather than zero.
+
 Every chapter has an independent shared like count in the reader toolbar. Visitors can like or unlike without signing in. One random browser identifier is kept in localStorage, so refreshing, changing pages, and switching reading modes do not add extra votes. Counts are stored by the owner’s Cloudflare Worker and D1 database, separately from GitHub comments and reactions. Clearing browser storage or using another browser creates a different voter; this is a reaction counter rather than a count of verified unique people.
 
 `site/likes.config.js` contains only the public API URL. The application stores a hash of the random identifier, the chapter key, and vote creation time, with no account details or application-level IP/fingerprint collection. Cloudflare’s ordinary platform processing still applies. Failed requests show a retry message rather than a fabricated count. Backend source, schema, deployment notes, and tests are in `services/likes/`.
