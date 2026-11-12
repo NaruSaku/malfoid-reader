@@ -131,6 +131,7 @@
       caption.append(original);
     }
     figure.append(button, caption);
+    window.ReaderPageComments?.attach(figure, { comic: data, chapter: chapter(), page });
     return figure;
   };
   const render = (scrollToPage = true) => {
