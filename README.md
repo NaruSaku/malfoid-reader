@@ -2,7 +2,7 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, and 5**, with 609 numbered comic pages and fourteen covers.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1**, with 656 numbered comic pages and fifteen covers.
 - **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, 13, 14, and 15**, with **109 English comic pages and five chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapter **1**, with **46 English comic pages and its chapter cover**.
@@ -105,3 +105,5 @@ Every chapter has an independent shared like count in the reader toolbar. Visito
 Every comic image has its own collapsible, login-free comment panel beneath the caption in both reading modes. A name is optional; comments appear publicly immediately and are kept separate by comic, chapter, and numbered page. Existing GitHub comic/chapter discussions remain available. Comments are plain text, up to 2,000 characters, with basic rate limits and duplicate-request protection.
 
 The owner can manage comments in Cloudflare D1 → malfoid-reader-likes → Explore Data → page_comments. Changing a row’s status to hidden removes it from public view without deleting the record. The application stores public comment data, a hashed random browser identifier, and a daily changing network hash for rate limiting; raw IPs and account details are not stored by application code. Cloudflare’s ordinary platform processing still applies. See services/comments/README.md for moderation, data handling, API details, and tests.
+
+Draconia Chapter 5.1, Top of the Class, includes its approved independent cover and all 47 approved English pages. Source hashes match the formal records, including the latest November 10 revisions to pages 22, 30, and 32. Original artwork post links are pending; the original-story directory remains linked. Released under the artist’s November 12 scheduled publication authorization.
