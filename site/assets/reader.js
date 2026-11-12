@@ -65,6 +65,7 @@
   };
   const updateNavigation = () => {
     const current = chapter();
+    window.ReaderLikes?.show({ comic: data, chapter: current });
     pageSelect.value = String(pageIndex);
     $('#page-total').textContent = `/ ${current.pageCount}`;
     $('#previous').disabled = chapterIndex === 0 && pageIndex === 0;

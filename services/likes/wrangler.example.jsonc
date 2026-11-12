@@ -1,0 +1,12 @@
+{
+  "name": "malfoid-reader-likes",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-11",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "malfoid-reader-likes",
+    "database_id": "REPLACE_WITH_CREATED_D1_DATABASE_ID"
+  }]
+}

@@ -8,17 +8,20 @@
   <title>Read — Malfoid Reader</title>
   <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css?v=7">
+  <link rel="stylesheet" href="assets/likes.css?v=1">
   <script src="catalog.js?v=24" defer></script>
   <script src="assets/shared.js?v=4" defer></script>
   <script src="comments.config.js?v=1" defer></script>
   <script src="assets/comments.js?v=3" defer></script>
-  <script src="assets/reader.js?v=8" defer></script>
+  <script src="likes.config.js?v=1" defer></script>
+  <script src="assets/likes.js?v=1" defer></script>
+  <script src="assets/reader.js?v=9" defer></script>
 </head>
 <body class="reader-body">
   <a class="skip" href="#comic-pages">Skip to comic</a>
   <header class="reader-header"><a class="reader-home" id="reader-home" href="./" aria-label="Back to all chapters"><span aria-hidden="true">←</span><img src="assets/crest.svg" alt="" width="25" height="30"><span id="reader-comic-name">Malfoid Reader</span></a><div class="reader-heading"><label class="sr-only" for="chapter-select">Choose chapter</label><select id="chapter-select"></select></div><a id="original-chapter" class="reader-story-link" target="_blank" rel="noopener noreferrer">Original story <span aria-hidden="true">↗</span></a></header>
   <main>
-    <div class="reader-tools"><div class="mode-switch" role="group" aria-label="Reading mode"><button id="mode-page" aria-pressed="true">Page</button><button id="mode-scroll" aria-pressed="false">Scroll</button></div><p class="reader-hint" id="reader-hint">Click the page to enlarge</p><button id="theme-toggle" class="quiet-button" aria-label="Switch to light background">Light background <span aria-hidden="true">◐</span></button></div>
+    <div class="reader-tools"><div class="mode-switch" role="group" aria-label="Reading mode"><button id="mode-page" aria-pressed="true">Page</button><button id="mode-scroll" aria-pressed="false">Scroll</button></div><p class="reader-hint" id="reader-hint">Click the page to enlarge</p><div class="likes-control" id="chapter-likes" hidden><button class="likes-button" type="button" aria-pressed="false" aria-label="Like this chapter" title="Like this chapter. No sign-in needed." disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="likes-label">Like</span><span class="likes-count">—</span></button><button type="button" class="likes-status" aria-live="polite"></button></div><button id="theme-toggle" class="quiet-button" aria-label="Switch to light background">Light background <span aria-hidden="true">◐</span></button></div>
     <h1 class="sr-only" id="reader-title">Comic reader</h1>
     <div class="comic-pages" id="comic-pages" aria-label="Comic pages"></div>
     <div class="reader-end" id="reader-end" hidden><p class="eyebrow">YOU’RE ALL CAUGHT UP</p><h2 id="end-heading">Until the next chapter.</h2><p id="end-description">Read ahead in the original story.</p><a class="text-link" id="end-story" target="_blank" rel="noopener noreferrer">Read the original story ↗</a><a class="text-link" id="end-chapters" href="./">Back to the chapters →</a><a class="text-link" href="./">All comics →</a></div>

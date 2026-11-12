@@ -1,0 +1,16 @@
+.reader-tools:has(.likes-control:not([hidden])) .reader-hint{display:none}
+.reader-tools .likes-control{display:flex;align-items:center;gap:7px;position:relative;margin-left:auto}
+.likes-button{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 12px;border:1px solid var(--line);border-radius:18px;background:transparent;color:var(--gold);font-size:11px;white-space:nowrap}
+.likes-button svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;transition:fill .15s}
+.likes-button[aria-pressed=true] svg{fill:currentColor}
+.likes-button:hover:enabled{background:rgba(200,180,139,.1)}
+.likes-button:disabled{opacity:.65}
+.likes-count{font-variant-numeric:tabular-nums;min-width:1ch}
+.likes-status{position:absolute;top:calc(100% + 9px);right:0;width:230px;padding:10px 12px;z-index:30;background:#15241e;border:1px solid var(--line);color:var(--ink);font-size:11px;line-height:1.6;text-align:left}
+.likes-status:empty{display:none}
+.likes-status:disabled{opacity:1;cursor:default}
+.likes-error .likes-status{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.reader-light .likes-button{color:#425c3f;border-color:#b2bba8}
+.reader-light .likes-status{background:#f3efe4;color:#1d3221;border-color:#b2bba8}
+@media(max-width:400px){.reader-tools{gap:6px}.likes-button{padding:6px 9px;gap:5px}.likes-label{display:none}.likes-status{right:-50px;width:220px}}
+@media(prefers-reduced-motion:reduce){.likes-button svg{transition:none}}
