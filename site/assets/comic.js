@@ -80,7 +80,7 @@
     imageWrap.append(image);
     const overlay = document.createElement('span'); overlay.className = 'cover-action'; overlay.textContent = 'Read chapter →'; imageWrap.append(overlay);
     const meta = document.createElement('p'); meta.className = 'chapter-meta'; meta.textContent = `CHAPTER ${chapter.number} / ${chapter.pageCount} PAGES`;
-    const heading = document.createElement('h3'); heading.textContent = chapter.title;
+    const heading = document.createElement('h3'); heading.textContent = data.id === 'year-4' ? `Chapter ${chapter.number}` : chapter.title;
     link.append(imageWrap, meta, heading); article.append(link);
     const story = document.createElement('a'); story.href = chapter.storyUrl; story.className = 'chapter-story'; story.textContent = 'Original chapter ↗'; story.target = '_blank'; story.rel = 'noopener noreferrer'; article.append(story);
     grid.append(article);
