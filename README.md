@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1**, with 656 numbered comic pages and fifteen covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, 13, 14, and 15**, with **109 English comic pages and five chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, 13, 14, 15, and 16**, with **137 English comic pages and six chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapter **1**, with **46 English comic pages and its chapter cover**.
 
@@ -107,3 +107,5 @@ Every comic image has its own collapsible, login-free comment panel beneath the 
 The owner can manage comments in Cloudflare D1 → malfoid-reader-likes → Explore Data → page_comments. Changing a row’s status to hidden removes it from public view without deleting the record. The application stores public comment data, a hashed random browser identifier, and a daily changing network hash for rate limiting; raw IPs and account details are not stored by application code. Cloudflare’s ordinary platform processing still applies. See services/comments/README.md for moderation, data handling, API details, and tests.
 
 Draconia Chapter 5.1, Top of the Class, includes its approved independent cover and all 47 approved English pages. Source hashes match the formal records, including the latest November 10 revisions to pages 22, 30, and 32. Original artwork post links are pending; the original-story directory remains linked. Released under the artist’s November 12 scheduled publication authorization.
+
+Flirt Chapter 16 includes its independent cover and complete 28-page English sequence, published at the artist’s November 13, 2026 request. It uses the current page 4 JPG replacement, the latest page 6 arm revision, the approved page 14 redraw, and page 28 with the ending marker. Original artwork post links remain pending. Chapter-list titles continue to display chapter numbers without summaries.
