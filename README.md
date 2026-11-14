@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, and 5.2**, with 695 numbered comic pages and sixteen covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, 13, 14, 15, and 16**, with **137 English comic pages and six chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 9, 13, 14, 15, 16, and 17**, with **161 English comic pages and seven chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 2–8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapter **1**, with **46 English comic pages and its chapter cover**.
 
@@ -111,3 +111,5 @@ Draconia Chapter 5.1, Top of the Class, includes its approved independent cover 
 Flirt Chapter 16 includes its independent cover and complete 28-page English sequence, published at the artist’s November 13, 2026 request. It uses the current page 4 JPG replacement, the latest page 6 arm revision, the approved page 14 redraw, and page 28 with the ending marker. Original artwork post links remain pending. Chapter-list titles continue to display chapter numbers without summaries.
 
 Draconia Chapter 5.2, The Firebolt Feud, includes its approved independent cover and all 39 approved English pages. Source hashes match the latest saved formal versions, including the November 12 chair revisions to pages 10–12 and November 13 caption revisions to pages 31–32. Original artwork post links remain pending. Published at the artist’s November 13, 2026 request.
+
+Flirt Chapter 17 includes its newly designed cover and complete 24-page English sequence, published at the artist’s request. All source hashes match the current saved versions, including the latest revisions to pages 12, 22, and 24. Original artwork post links remain pending.
