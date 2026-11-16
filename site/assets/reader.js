@@ -49,17 +49,18 @@
     const found = data.chapters.findIndex(item => item.id === params.get('chapter'));
     chapterIndex = found < 0 ? 0 : found;
     let requested = Number(params.get('page') || 0);
-    if (data.pageNumberingVersion === 2 && params.has('page') && params.get('edition') !== '2' && Number.isInteger(requested)) requested += 1;
+    if (params.has('page')) requested = library.migratePage(data.id, chapter().id, requested, params.get('edition'));
     pageIndex = Number.isInteger(requested) ? Math.max(0, Math.min(requested, chapter().pages.length - 1)) : 0;
   };
   const save = () => {
-    const progress = JSON.stringify({ chapter: chapter().id, page: pageIndex, ...(data.pageNumberingVersion === 2 ? { edition: 2 } : {}) });
+    const edition = library.pageEdition(data.id, chapter().id);
+    const progress = JSON.stringify({ chapter: chapter().id, page: pageIndex, ...(edition ? { edition } : {}) });
     writeStorage(`malfoid.progress.${data.id}`, progress);
     if (data.id === 'draconia') writeStorage('malfoid.progress', progress);
     const url = new URL(location.href);
     url.searchParams.set('chapter', chapter().id);
     url.searchParams.set('page', pageIndex);
-    if (data.pageNumberingVersion === 2) url.searchParams.set('edition', '2');
+    if (edition) url.searchParams.set('edition', String(edition));
     if (data.id !== 'draconia' || url.searchParams.has('comic')) url.searchParams.set('comic', data.id);
     history.replaceState(null, '', url);
   };

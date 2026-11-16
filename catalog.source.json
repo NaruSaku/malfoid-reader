@@ -709,7 +709,7 @@
           "number": "2",
           "title": "Flirt",
           "source": "漫画制作/Chapter2/英文彩色漫画",
-          "cover": null,
+          "cover": "封面_英文彩色.png",
           "lastPage": 20,
           "filenamePattern": "第{page:02d}页_英文彩色.png",
           "description": "",
@@ -717,12 +717,13 @@
           "posts": [
             {
               "part": "I",
-              "firstPage": 1,
+              "firstPage": 0,
               "lastPage": 20,
               "url": null,
               "pending": true
             }
-          ]
+          ],
+          "coverRevision": "198bd586"
         },
         {
           "id": "year4-chapter-9",
@@ -877,7 +878,10 @@
       ],
       "publicationLabel": "CHAPTERS 1, 2, 9, 13, 14, 15, 16, 17 & 18",
       "publicationNote": "Available chapters: 1, 2, 9, 13, 14, 15, 16, 17, and 18. More chapters will be added by the artist.",
-      "pageNumberingVersion": 2
+      "pageNumberingVersion": 2,
+      "chapterPageNumberingVersions": {
+        "year4-chapter-2": 3
+      }
     },
     {
       "id": "american-vacation",
