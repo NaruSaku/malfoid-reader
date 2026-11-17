@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, and 5.2**, with 695 numbered comic pages and sixteen covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 9, 13, 14, 15, 16, 17, 18, and 19**, with **229 English comic pages and ten chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 3–8 and 10–12 have not been added to this website.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 9, 13, 14, 15, 16, 17, 18, and 19**, with **247 English comic pages and eleven chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 3–8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapter **1**, with **46 English comic pages and its chapter cover**.
 
@@ -121,3 +121,5 @@ Flirt Chapter 2 includes all 20 current English pages, inserted after Chapter 1 
 The artist approved Flirt Chapter 2’s entire freshly drawn cover on November 15, 2026. The exact approved PNG was saved locally before publishing web copies. Chapter 2 now uses edition 3 links; earlier edition 2 URLs and saved positions move forward by one image to preserve the same body page. Other Flirt chapters keep edition 2. Body page numbers and per-image comment keys remain unchanged.
 
 Flirt Chapter 19 includes its independent cover and complete 26-page English sequence, published at the artist’s November 16, 2026 request. Every selected source matches the current production hashes, including the latest page 24 balloon revision and page 26 ending marker. Original artwork post links remain pending. Chapter 2’s approved cover, edition 3 links and progress compatibility are preserved.
+
+Flirt Chapter 3 includes its independent cover and complete 18-page English sequence, published at the artist’s November 16, 2026 request. All 19 selected images match the current production hashes, including the latest page 1 revision and current-number-only page footers. It appears after Chapter 2 and before Chapter 9. Original artwork post links remain pending. Existing chapter covers, edition links, and progress compatibility are preserved.
