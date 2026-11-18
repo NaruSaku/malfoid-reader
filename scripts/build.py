@@ -79,9 +79,11 @@ def main():
             first_source = None
             for number, name in entries:
                 source = (directory / name).resolve()
+                # Publication approval can include selected finished pages still awaiting formal production filing.
+                publication_approved = number in item.get('publicationApprovedPages', [])
                 if not source.is_relative_to(source_root) or any(
-                    part in source.parts for part in ('待确认', '历史版本', '中文版')
-                ):
+                    part in source.parts for part in ('历史版本', '中文版')
+                ) or ('待确认' in source.parts and not publication_approved):
                     raise ValueError(f'Not an approved English page: {source}')
                 if not source.is_file():
                     raise FileNotFoundError(f'Approved page is missing: {source}')
@@ -106,7 +108,8 @@ def main():
             stat = first_source.stat()
             jobs.append((first_source, target, f'{first_source}:{stat.st_size}:{stat.st_mtime_ns}:thumb:v1', True))
             chapters.append({key: item[key] for key in ('id', 'number', 'title', 'description', 'storyUrl')} | {
-                'pages': pages, 'pageCount': item['lastPage'], 'thumbnail': thumb, 'hasCover': bool(item.get('cover'))
+                'pages': pages, 'pageCount': item['lastPage'], 'thumbnail': thumb, 'hasCover': bool(item.get('cover')),
+                **{key: item[key] for key in ('inProgress', 'publicationNote') if key in item}
             })
         public_comic = {key: value for key, value in comic.items()
                         if key not in ('sourceRoot', 'assetPrefix', 'chapters')}

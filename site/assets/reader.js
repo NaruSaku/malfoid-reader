@@ -23,6 +23,10 @@
   const chapterSelect = $('#chapter-select');
   const pageSelect = $('#page-select');
   const chapter = () => data.chapters[chapterIndex];
+  const publicationNote = document.createElement('p');
+  publicationNote.className = 'chapter-status reader-chapter-status';
+  publicationNote.hidden = true;
+  container.before(publicationNote);
   $('#reader-home').href = `${library.projectUrl(data.id)}#chapters`;
   $('#reader-comic-name').textContent = data.shortTitle;
   $('#end-chapters').href = `${library.projectUrl(data.id)}#chapters`;
@@ -66,6 +70,11 @@
   };
   const updateNavigation = () => {
     const current = chapter();
+    publicationNote.hidden = !current.inProgress;
+    publicationNote.textContent = current.publicationNote || '';
+    $('#reader-end .eyebrow').textContent = current.inProgress ? 'CONTINUED SOON' : 'YOU’RE ALL CAUGHT UP';
+    $('#end-heading').textContent = current.inProgress ? 'More pages coming.' : (data.complete ? 'The end.' : 'Until the next chapter.');
+    $('#end-description').textContent = current.inProgress ? current.publicationNote : (data.complete ? `Thank you for reading ${data.title}.` : 'Read ahead in the original story.');
     window.ReaderLikes?.show({ comic: data, chapter: current });
     pageSelect.value = String(pageIndex);
     $('#page-total').textContent = `/ ${current.pageCount}`;

@@ -1010,8 +1010,8 @@
       "complete": false,
       "description": "Harry, Dracena, and their daughter Lily take a family holiday across the Atlantic. What could possibly go wrong?",
       "heroDescription": "A family holiday. A flight over the Atlantic. And a very unfamiliar Muggle world.",
-      "publicationLabel": "CHAPTER 1",
-      "publicationNote": "Chapter 1 is available. More chapters will be added by the artist.",
+      "publicationLabel": "CHAPTERS 1 & 2 · CHAPTER 2 IN PROGRESS",
+      "publicationNote": "Chapter 1 is complete. Chapter 2 is available through page 28 and is still in progress. More pages will be added.",
       "headingLines": [
         {
           "text": "Harry Potter"
@@ -1041,6 +1041,40 @@
               "part": "I",
               "firstPage": 0,
               "lastPage": 46,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
+          "id": "american-vacation-chapter-2",
+          "number": "2",
+          "title": "Chapter Two",
+          "source": "漫画制作/第二章",
+          "cover": "封面_英文版.png",
+          "lastPage": 28,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "pageSources": {
+            "25": "../待确认/第二章/第25页_英文版.png",
+            "26": "../待确认/第二章/第26页_英文版.png",
+            "27": "../待确认/第二章/第27页_英文版.png",
+            "28": "../待确认/第二章/第28页_英文版.png"
+          },
+          "publicationApprovedPages": [
+            25,
+            26,
+            27,
+            28
+          ],
+          "inProgress": true,
+          "publicationNote": "Chapter 2 is still in progress. More pages will be added.",
+          "description": "",
+          "storyUrl": "https://x.com/ShamashAran/status/2110889440096690327",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 28,
               "url": null,
               "pending": true
             }
