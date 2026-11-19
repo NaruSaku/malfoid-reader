@@ -810,7 +810,10 @@
               "url": null,
               "pending": true
             }
-          ]
+          ],
+          "pageRevisions": {
+            "12": "dc93fa78"
+          }
         },
         {
           "id": "year4-chapter-9",
