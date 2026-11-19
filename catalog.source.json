@@ -792,6 +792,27 @@
           ]
         },
         {
+          "id": "year4-chapter-5",
+          "number": "5",
+          "title": "Flirt",
+          "source": "漫画制作/Chapter5/英文彩色漫画",
+          "cover": "封面_英文彩色.png",
+          "lastPage": 17,
+          "filenamePattern": "第{page:02d}页_英文彩色.png",
+          "pageSources": {},
+          "description": "",
+          "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 17,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
           "id": "year4-chapter-9",
           "number": "9",
           "title": "Flirt",
@@ -984,8 +1005,8 @@
           ]
         }
       ],
-      "publicationLabel": "CHAPTERS 1, 2, 3, 4, 9, 13, 14, 15, 16, 17, 18, 19 & 20",
-      "publicationNote": "Available chapters: 1, 2, 3, 4, 9, 13, 14, 15, 16, 17, 18, 19, and 20. More chapters will be added by the artist.",
+      "publicationLabel": "CHAPTERS 1, 2, 3, 4, 5, 9, 13, 14, 15, 16, 17, 18, 19 & 20",
+      "publicationNote": "Available chapters: 1, 2, 3, 4, 5, 9, 13, 14, 15, 16, 17, 18, 19, and 20. More chapters will be added by the artist.",
       "pageNumberingVersion": 2,
       "chapterPageNumberingVersions": {
         "year4-chapter-2": 3

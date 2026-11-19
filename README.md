@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, 5.2, and 6**, with 756 numbered comic pages and seventeen covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 4, 9, 13, 14, 15, 16, 17, 18, 19, and 20**, with **296 English comic pages and thirteen chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 5–8 and 10–12 have not been added to this website.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 4, 5, 9, 13, 14, 15, 16, 17, 18, 19, and 20**, with **313 English comic pages and fourteen chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 6–8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapters **1 and 2**, with **74 English comic pages and two chapter covers**. Chapter 2 is in progress and currently includes pages 1–28.
 
@@ -131,3 +131,5 @@ Flirt Chapter 20 includes its independent cover and complete 24-page English seq
 Flirt Chapter 4 includes its independent cover and complete 25-page English sequence, published at the artist’s November 17, 2026 request. All 26 selected images match the current production hashes, including the latest page 16 revision. It appears after Chapter 3 and before Chapter 9. Original artwork post links remain pending. All prior chapters, the original-ratio reading and zoom styles, and Draconia’s Not Adapted list are preserved.
 
 American Vacation Chapter 2 is published as a work in progress at the artist’s November 18, 2026 request: its saved cover and pages 1–24, plus the completed current pages 25–28. The latter have explicit publication approval without changing production filing flags. Chapter cards, the reader, and the last available page make the incomplete status clear. Original artwork X links remain pending; no novel text is hosted.
+
+Flirt Chapter 5 includes its independent cover and complete 17-page English sequence, published at the artist’s November 18, 2026 request. All 18 selected images match the current production hashes, including the latest page 1 title removal and pages 12 and 14 hand revisions. It appears after Chapter 4 and before Chapter 9. Original artwork post links remain pending. All prior chapters and features, including American Vacation Chapter 2’s in-progress notice, are preserved.
