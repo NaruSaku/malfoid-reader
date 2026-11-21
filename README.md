@@ -3,7 +3,7 @@
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
 - **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, 5.2, 6, 6.1, and 6.2**, with 820 numbered comic pages and nineteen covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 4, 5, 6, 9, 13, 14, 15, 16, 17, 18, 19, and 20**, with **337 English comic pages and fifteen chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 7–8 and 10–12 have not been added to this website.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 4, 5, 6, 7, 9, 13, 14, 15, 16, 17, 18, 19, and 20**, with **357 English comic pages and sixteen chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 8 and 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapters **1 and 2**, with **74 English comic pages and two chapter covers**. Chapter 2 is in progress and currently includes pages 1–28.
 
@@ -139,3 +139,5 @@ Draconia Chapter 6.1, Chocolate, includes its approved independent cover and all
 Flirt Chapter 6 includes its independent cover and complete 24-page English sequence, published at the artist’s November 19, 2026 request. All 25 selected images match the current production hashes, including the latest page 3 speech-bubble repair and pages 19–20 hand revisions. It appears after Chapter 5 and before Chapter 9. Original artwork post links remain pending. All prior chapters and features are preserved.
 
 Draconia Chapter 6.2, Found on the Path, includes its approved cover and all 24 formal English pages. All 25 source hashes match current formal production records, including the latest approved pages 5, 23, and 24. Original artwork post links remain pending. Earlier chapters, other comics, page revisions, and the Not Adapted section are preserved.
+
+Flirt Chapter 7 includes its independent cover and complete 20-page English sequence, published at the artist’s November 20, 2026 request. All 21 selected images match current production hashes, including the latest page 18 redraw. It appears after Chapter 6 and before Chapter 9. Original artwork post links remain pending. All prior chapters and features are preserved.
