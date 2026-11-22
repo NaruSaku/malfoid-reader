@@ -13,6 +13,19 @@
     return;
   }
   const $ = selector => document.querySelector(selector);
+  const anthology = data.kind === 'anthology';
+  const entryLabel = anthology ? 'Short comic' : 'Chapter';
+  const sourceCredit = document.createElement('p');
+  if (anthology) {
+    document.body.classList.add('short-comic-reader');
+    sourceCredit.className = 'short-comic-credit';
+    sourceCredit.textContent = data.credits;
+    container.before(sourceCredit);
+    $('label[for="chapter-select"]').textContent = 'Choose short comic';
+    $('#original-chapter').textContent = 'Original on bilibili ↗';
+    $('#end-story').textContent = 'Watch the original on bilibili ↗';
+    $('#end-chapters').textContent = 'Back to the short comics →';
+  }
   const readStorage = (key, fallback) => { try { return localStorage.getItem(key) || fallback; } catch { return fallback; } };
   const writeStorage = (key, value) => { try { localStorage.setItem(key, value); } catch {} };
   let chapterIndex = 0;
@@ -45,7 +58,7 @@
   data.chapters.forEach(item => {
     const option = document.createElement('option');
     option.value = item.id;
-    option.textContent = `Chapter ${item.number} · ${item.title}`;
+    option.textContent = `${entryLabel} ${item.number} · ${item.title}`;
     chapterSelect.append(option);
   });
   const applyLocation = () => {
@@ -70,28 +83,33 @@
   };
   const updateNavigation = () => {
     const current = chapter();
-    publicationNote.hidden = !current.inProgress;
-    publicationNote.textContent = current.publicationNote || '';
+    publicationNote.hidden = !(current.inProgress || current.sourceNote);
+    publicationNote.textContent = current.sourceNote || current.publicationNote || '';
     $('#reader-end .eyebrow').textContent = current.inProgress ? 'CONTINUED SOON' : 'YOU’RE ALL CAUGHT UP';
     $('#end-heading').textContent = current.inProgress ? 'More pages coming.' : (data.complete ? 'The end.' : 'Until the next chapter.');
     $('#end-description').textContent = current.inProgress ? current.publicationNote : (data.complete ? `Thank you for reading ${data.title}.` : 'Read ahead in the original story.');
+    if (anthology) {
+      $('#reader-end .eyebrow').textContent = 'THE COLLECTION';
+      $('#end-heading').textContent = 'Thank you for reading.';
+      $('#end-description').textContent = data.credits;
+    }
     window.ReaderLikes?.show({ comic: data, chapter: current });
     pageSelect.value = String(pageIndex);
-    $('#page-total').textContent = `/ ${current.pageCount}`;
+    $('#page-total').textContent = anthology ? `${current.pageCount} pages` : `/ ${current.pageCount}`;
     $('#previous').disabled = chapterIndex === 0 && pageIndex === 0;
     $('#next').disabled = chapterIndex === data.chapters.length - 1 && pageIndex === current.pages.length - 1;
     $('#reader-end').hidden = !(chapterIndex === data.chapters.length - 1 && (mode === 'scroll' || pageIndex === current.pages.length - 1));
     $('#reader-support').hidden = !(mode === 'scroll' || pageIndex === current.pages.length - 1);
     window.ReaderComments?.show({ comic: data, chapter: current, visible: mode === 'scroll' || pageIndex === current.pages.length - 1 });
-    $('#page-announcement').textContent = `Chapter ${current.number}, ${current.pages[pageIndex].label}`;
-    document.title = `${current.pages[pageIndex].label} · ${data.shortTitle} · Chapter ${current.number} — Malfoid Reader`;
+    $('#page-announcement').textContent = `${entryLabel} ${current.number}, ${current.pages[pageIndex].label}`;
+    document.title = `${current.pages[pageIndex].label} · ${data.shortTitle} · ${entryLabel} ${current.number} — Malfoid Reader`;
     save();
   };
   const openZoom = index => {
     const page = chapter().pages[index];
     $('#zoom-image').src = page.src;
-    $('#zoom-image').alt = `Chapter ${chapter().number}, ${page.label}`;
-    $('#zoom-caption').textContent = `Chapter ${chapter().number} · ${page.label} · Full size`;
+    $('#zoom-image').alt = `${entryLabel} ${chapter().number}, ${page.label}`;
+    $('#zoom-caption').textContent = `${entryLabel} ${chapter().number} · ${page.label} · Full size`;
     $('#zoom-dialog').showModal();
     document.body.classList.add('zoom-open');
   };
@@ -108,7 +126,7 @@
     image.src = page.src;
     image.width = 1024;
     image.height = 1536;
-    image.alt = `Chapter ${chapter().number}: ${chapter().title}, ${page.label}`;
+    image.alt = `${entryLabel} ${chapter().number}: ${chapter().title}, ${page.label}`;
     image.loading = index === pageIndex ? 'eager' : 'lazy';
     image.decoding = 'async';
     if (index === pageIndex) image.fetchPriority = 'high';
@@ -127,18 +145,18 @@
     });
     const caption = document.createElement('figcaption');
     const label = document.createElement('span');
-    const chapterLabel = `Chapter ${chapter().number}`;
+    const chapterLabel = `${entryLabel} ${chapter().number}`;
     const pageLabel = page.number === 0 ? 'Cover' : `p. ${page.number}`;
     label.textContent = `${chapterLabel} · ${pageLabel}`;
     caption.append(label);
-    if (page.originalPost) {
+    if (page.originalPost || page.sourceUrl) {
       const original = document.createElement('a');
       original.className = 'original-post-link';
-      original.href = page.originalPost;
-      original.textContent = 'Original post on X ↗';
+      original.href = page.sourceUrl || page.originalPost;
+      original.textContent = page.sourceUrl ? 'Original comic on bilibili ↗' : 'Original post on X ↗';
       original.target = '_blank';
       original.rel = 'noopener noreferrer';
-      original.setAttribute('aria-label', `Original post on X for ${page.label.toLowerCase()} (opens in a new tab)`);
+      original.setAttribute('aria-label', `${page.sourceUrl ? 'Original comic on bilibili' : 'Original post on X'} for ${page.label.toLowerCase()} (opens in a new tab)`);
       caption.append(original);
     }
     figure.append(button, caption);
@@ -148,9 +166,9 @@
   const render = (scrollToPage = true) => {
     cancelAnimationFrame(scrollFrame);
     chapterSelect.value = chapter().id;
-    $('#reader-title').textContent = `Chapter ${chapter().number}: ${chapter().title}`;
+    $('#reader-title').textContent = `${entryLabel} ${chapter().number}: ${chapter().title}`;
     $('#original-chapter').href = chapter().storyUrl;
-    $('#end-story').href = data.storyUrl;
+    $('#end-story').href = anthology ? chapter().storyUrl : data.storyUrl;
     $('#mode-page').setAttribute('aria-pressed', String(mode === 'page'));
     $('#mode-scroll').setAttribute('aria-pressed', String(mode === 'scroll'));
     document.body.classList.toggle('scroll-mode', mode === 'scroll');

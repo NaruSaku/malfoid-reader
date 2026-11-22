@@ -16,7 +16,9 @@ REPO = Path(__file__).resolve().parent.parent
 def page_posts(chapter):
     """Resolve curated ranges; explicitly pending URLs stay absent until supplied."""
     first = 0 if chapter.get('cover') else 1
-    expected = set(range(first, chapter['lastPage'] + 1))
+    expected = set(chapter.get('pageNumbers', range(1, chapter['lastPage'] + 1)))
+    if first == 0:
+        expected.add(0)
     result = {}
     for post in chapter['posts']:
         if post.get('pending') is True:
@@ -73,7 +75,7 @@ def main():
             pages, entries = [], []
             if item.get('cover'):
                 entries.append((0, item['cover']))
-            for number in range(1, item['lastPage'] + 1):
+            for number in item.get('pageNumbers', range(1, item['lastPage'] + 1)):
                 name = item.get('pageSources', {}).get(str(number)) or item['filenamePattern'].format(page=number)
                 entries.append((number, name))
             first_source = None
@@ -100,7 +102,8 @@ def main():
                 jobs.append((source, target, signature, False))
                 pages.append({
                     'src': relative, 'label': 'Cover' if number == 0 else f'Page {number}', 'number': number,
-                    'originalPost': posts[number]['url'], 'postPart': posts[number]['part']
+                    'originalPost': posts[number]['url'], 'postPart': posts[number]['part'],
+                    **({'sourceUrl': item['storyUrl']} if comic.get('kind') == 'anthology' else {})
                 })
             thumb = (prefix / f'thumbnail{cover_suffix}.webp').as_posix()
             target = site / thumb
@@ -108,8 +111,8 @@ def main():
             stat = first_source.stat()
             jobs.append((first_source, target, f'{first_source}:{stat.st_size}:{stat.st_mtime_ns}:thumb:v1', True))
             chapters.append({key: item[key] for key in ('id', 'number', 'title', 'description', 'storyUrl')} | {
-                'pages': pages, 'pageCount': item['lastPage'], 'thumbnail': thumb, 'hasCover': bool(item.get('cover')),
-                **{key: item[key] for key in ('inProgress', 'publicationNote') if key in item}
+                'pages': pages, 'pageCount': len(pages) - bool(item.get('cover')), 'thumbnail': thumb, 'hasCover': bool(item.get('cover')),
+                **{key: item[key] for key in ('inProgress', 'publicationNote', 'sourceNote') if key in item}
             })
         public_comic = {key: value for key, value in comic.items()
                         if key not in ('sourceRoot', 'assetPrefix', 'chapters')}
@@ -131,7 +134,9 @@ def main():
             original.load()
             image = ImageOps.exif_transpose(original).convert('RGB')
             if not thumbnail and image.size != (1024, 1536):
-                if image.width >= 1024 and image.height >= 1536 and image.width * 3 == image.height * 2:
+                if source.is_relative_to(library_root / '视频漫画_彩色英文无水印'):
+                    pass  # Preserve the original screenshot page proportions.
+                elif image.width >= 1024 and image.height >= 1536 and image.width * 3 == image.height * 2:
                     image = image.resize((1024, 1536), Image.Resampling.LANCZOS)
                 else:
                     raise ValueError(f'Unexpected comic dimensions {image.size}: {source}')

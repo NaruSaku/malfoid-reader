@@ -1188,6 +1188,246 @@
           ]
         }
       ]
+    },
+    {
+      "id": "short-comics",
+      "kind": "anthology",
+      "title": "Short Comics",
+      "shortTitle": "Short Comics",
+      "artist": {
+        "name": "Focolate @ bilibili",
+        "url": "https://www.bilibili.com/video/BV1dnnE6PEb3/"
+      },
+      "author": {
+        "name": "Focolate @ bilibili",
+        "url": "https://www.bilibili.com/video/BV1dnnE6PEb3/"
+      },
+      "translator": {
+        "name": "Crepuscule3307",
+        "url": "https://x.com/wanruochenhun"
+      },
+      "storyUrl": "https://www.bilibili.com/video/BV1dnnE6PEb3/",
+      "sourceRoot": "视频漫画_彩色英文无水印",
+      "assetPrefix": "short-comics",
+      "setting": "A short comic collection",
+      "complete": true,
+      "description": "Original comics: Focolate @ bilibili. English translation & colouring: Crepuscule3307.",
+      "heroDescription": "Six short comics by Focolate @ bilibili, presented in English and colour by Crepuscule3307.",
+      "publicationLabel": "6 SHORT COMICS · ENGLISH & COLOUR",
+      "publicationNote": "Six short comics · 67 pages. Original comics by Focolate @ bilibili; English translation and colouring by Crepuscule3307.",
+      "headingLines": [
+        {
+          "text": "Little stories."
+        },
+        {
+          "text": "Lovely moments.",
+          "emphasis": true
+        }
+      ],
+      "credits": "Original comics: Focolate @ bilibili. English translation & colouring: Crepuscule3307.",
+      "chapters": [
+        {
+          "id": "bv1dnne6peb3",
+          "number": "1",
+          "title": "The Ferret Incident",
+          "source": "BV1dnnE6PEb3",
+          "lastPage": 8,
+          "pageNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "filenamePattern": "第{page:02d}页_彩色英文无水印版.png",
+          "description": "",
+          "storyUrl": "https://www.bilibili.com/video/BV1dnnE6PEb3/",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 1,
+              "lastPage": 8,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
+          "id": "bv1ecpm6zerj",
+          "number": "2",
+          "title": "The Forbidden Forest",
+          "source": "BV1ECpm6ZErJ",
+          "lastPage": 13,
+          "pageNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "filenamePattern": "第{page:02d}页_彩色英文无水印版.png",
+          "description": "",
+          "storyUrl": "https://www.bilibili.com/video/BV1ECpm6ZErJ/",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 1,
+              "lastPage": 13,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
+          "id": "bv1pjnb6ieja",
+          "number": "3",
+          "title": "Until the Very End",
+          "source": "BV1PJnB6iEjA",
+          "lastPage": 13,
+          "pageNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "filenamePattern": "第{page:02d}页_彩色英文无水印版.png",
+          "description": "",
+          "storyUrl": "https://www.bilibili.com/video/BV1PJnB6iEjA/",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 1,
+              "lastPage": 13,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
+          "id": "bv1okxu6ret7",
+          "number": "4",
+          "title": "Homeward — The Last Master",
+          "source": "BV1okxu6RET7",
+          "lastPage": 12,
+          "pageNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "filenamePattern": "第{page:02d}页_彩色英文无水印版.png",
+          "description": "",
+          "storyUrl": "https://www.bilibili.com/video/BV1okxu6RET7/",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 1,
+              "lastPage": 12,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
+          "id": "bv1hkx76peip",
+          "number": "5",
+          "title": "The World Cup — A Secret in Pale Green",
+          "source": "BV1HKx76pEip",
+          "lastPage": 9,
+          "pageNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "filenamePattern": "第{page:02d}页_彩色英文无水印版.png",
+          "description": "",
+          "storyUrl": "https://www.bilibili.com/video/BV1HKx76pEip/",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 1,
+              "lastPage": 9,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
+          "id": "bv1iijc6ke1e",
+          "number": "6",
+          "title": "A Bargain Atop the Tower",
+          "source": "BV1iiJC6KE1e",
+          "lastPage": 13,
+          "pageNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12,
+            13
+          ],
+          "filenamePattern": "第{page:02d}页_彩色英文无水印版.png",
+          "description": "",
+          "storyUrl": "https://www.bilibili.com/video/BV1iiJC6KE1e/",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 1,
+              "lastPage": 9,
+              "url": null,
+              "pending": true
+            },
+            {
+              "part": "II",
+              "firstPage": 11,
+              "lastPage": 13,
+              "url": null,
+              "pending": true
+            }
+          ],
+          "sourceNote": "The original video skips printed page 10. The source page numbering is preserved here."
+        }
+      ]
     }
   ]
 }

@@ -29,18 +29,23 @@
     const description = document.createElement('p');
     description.className = 'comic-description';
     description.textContent = comic.description;
-    const stats = document.createElement('p'); stats.className = 'comic-stats'; stats.textContent = `${comic.chapters.length} ${comic.chapters.length === 1 ? 'chapter' : 'chapters'} · ${comic.totalPages} pages`;
-    const action = document.createElement('span'); action.className = 'comic-open'; action.textContent = 'View chapters →';
+    const stats = document.createElement('p'); stats.className = 'comic-stats'; stats.textContent = `${comic.chapters.length} ${comic.kind === 'anthology' ? 'short comics' : (comic.chapters.length === 1 ? 'chapter' : 'chapters')} · ${comic.totalPages} pages`;
+    const action = document.createElement('span'); action.className = 'comic-open'; action.textContent = comic.kind === 'anthology' ? 'Explore the collection →' : 'View chapters →';
     copy.append(description, stats, action);
     link.append(imageWrap, copy);
     article.append(link);
     const footer = document.createElement('div'); footer.className = 'comic-card-footer';
     const story = document.createElement('a');
     story.href = comic.storyUrl;
-    story.textContent = `Story by ${comic.author.name} ↗`;
+    story.textContent = `${comic.kind === 'anthology' ? 'Original comics' : 'Story'} by ${comic.author.name} ↗`;
     story.target = '_blank';
     story.rel = 'noopener noreferrer';
     footer.append(story);
+    if (comic.kind === 'anthology') {
+      const translation = document.createElement('a'); translation.href = comic.translator.url;
+      translation.textContent = `English translation & colouring by ${comic.translator.name} ↗`;
+      translation.target = '_blank'; translation.rel = 'noopener noreferrer'; footer.append(translation);
+    }
     const saved = library.progress(comic.id);
     if (saved) {
       const resume = document.createElement('a');

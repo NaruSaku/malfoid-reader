@@ -15,6 +15,8 @@
     return;
   }
   document.title = `${data.title} — Malfoid Reader`;
+  const anthology = data.kind === 'anthology';
+  const entryLabel = anthology ? 'Short comic' : 'Chapter';
   document.querySelector('meta[name="description"]').content = data.description;
   $('#breadcrumb-title').textContent = data.shortTitle;
   const title = $('#book-title');
@@ -30,6 +32,21 @@
     $(`#${key}-link`).textContent = data[key].name;
     $(`#${key}-link`).href = data[key].url;
   }
+  if (anthology) {
+    document.body.classList.add('short-comic-collection');
+    $('.comic-hero .eyebrow').textContent = 'A SHORT COMIC COLLECTION';
+    const byline = $('.byline'); byline.replaceChildren();
+    for (const [label, person] of [['ORIGINAL COMICS', data.artist], ['ENGLISH TRANSLATION & COLOURING', data.translator]]) {
+      const line = document.createElement('span'); line.append(`${label} BY `);
+      const link = document.createElement('a'); link.href = person.url; link.textContent = person.name;
+      link.target = '_blank'; link.rel = 'noopener noreferrer'; line.append(link); byline.append(line);
+    }
+    $('#begin-story').textContent = 'Read the first comic →';
+    $('.section-heading .eyebrow').textContent = 'THE SHORT COMICS';
+    $('#story-note-title').textContent = 'Meet the original creator.';
+    $('.story-note .eyebrow').textContent = 'ORIGINAL COMICS & CREDITS';
+    $('#original-story').textContent = 'Watch the original on bilibili ↗';
+  }
   const first = data.chapters[0];
   const beginUrl = library.readerUrl(data.id, first.id);
   $('#begin-story').href = beginUrl;
@@ -38,7 +55,7 @@
   $('#hero-image').src = data.preview;
   $('#hero-image').alt = `${data.title}, ${first.hasCover ? 'cover' : 'first comic page'}`;
   $('#art-caption').textContent = first.hasCover ? 'EVERY STORY HAS A FIRST CHAPTER' : (data.complete ? `THE COMPLETE ${data.totalPages}-PAGE COMIC` : `${data.totalPages} COMIC PAGES · ${data.chapters.length} CHAPTERS`);
-  if (data.complete) $('#chapters-title').textContent = 'The complete story.';
+  if (data.complete) $('#chapters-title').textContent = anthology ? 'Six little stories.' : 'The complete story.';
   const grid = $('#chapter-grid');
   if (data.chapters.length === 1) grid.classList.add('single-chapter');
   const chapterOrder = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
@@ -75,20 +92,20 @@
     const imageWrap = document.createElement('div'); imageWrap.className = 'chapter-cover';
     const image = document.createElement('img');
     image.src = chapter.thumbnail;
-    image.alt = `Chapter ${chapter.number}: ${chapter.title}, ${chapter.hasCover ? 'cover' : 'first page'}`;
+    image.alt = `${entryLabel} ${chapter.number}: ${chapter.title}, ${chapter.hasCover ? 'cover' : 'first page'}`;
     image.width = 480; image.height = 720; image.loading = 'lazy';
     imageWrap.append(image);
-    const overlay = document.createElement('span'); overlay.className = 'cover-action'; overlay.textContent = 'Read chapter →'; imageWrap.append(overlay);
-    const meta = document.createElement('p'); meta.className = 'chapter-meta'; meta.textContent = `CHAPTER ${chapter.number} / ${chapter.pageCount} PAGES`;
+    const overlay = document.createElement('span'); overlay.className = 'cover-action'; overlay.textContent = anthology ? 'Read comic →' : 'Read chapter →'; imageWrap.append(overlay);
+    const meta = document.createElement('p'); meta.className = 'chapter-meta'; meta.textContent = `${entryLabel.toUpperCase()} ${chapter.number} / ${chapter.pageCount} PAGES`;
     const heading = document.createElement('h3'); heading.textContent = data.id === 'year-4' ? `Chapter ${chapter.number}` : chapter.title;
     link.append(imageWrap, meta, heading); article.append(link);
-    const story = document.createElement('a'); story.href = chapter.storyUrl; story.className = 'chapter-story'; story.textContent = 'Original chapter ↗'; story.target = '_blank'; story.rel = 'noopener noreferrer'; article.append(story);
+    const story = document.createElement('a'); story.href = chapter.storyUrl; story.className = 'chapter-story'; story.textContent = anthology ? 'Original on bilibili ↗' : 'Original chapter ↗'; story.target = '_blank'; story.rel = 'noopener noreferrer'; article.append(story);
     grid.append(article);
   });
   $('#story-setting').textContent = data.setting.toUpperCase();
-  $('#collection-count').textContent = `${data.chapters.length} ${novelOnly.length ? 'COMIC ' : ''}${data.chapters.length === 1 ? 'CHAPTER' : 'CHAPTERS'}`;
+  $('#collection-count').textContent = anthology ? `${data.chapters.length} SHORT COMICS` : `${data.chapters.length} ${novelOnly.length ? 'COMIC ' : ''}${data.chapters.length === 1 ? 'CHAPTER' : 'CHAPTERS'}`;
   $('#publication-note').textContent = data.publicationNote || (data.complete ? `The complete comic · ${data.totalPages} pages.` : `Available through Chapter ${data.throughChapter}. More chapters will be added by the artist.`);
-  $('#story-credit').textContent = `Read the original story by ${data.author.name}.`;
+  $('#story-credit').textContent = anthology ? data.credits : `Read the original story by ${data.author.name}.`;
   $('#original-story').href = data.storyUrl;
   window.ReaderComments?.show({ comic: data });
   const saved = library.progress(data.id);
@@ -96,7 +113,7 @@
     const chapter = data.chapters.find(item => item.id === saved.chapter);
     const resume = $('#resume-link');
     resume.href = library.readerUrl(data.id, saved.chapter, saved.page);
-    resume.textContent = `Continue Chapter ${chapter.number} · ${chapter.pages[saved.page].label} ↗`;
+    resume.textContent = `Continue ${entryLabel} ${chapter.number} · ${chapter.pages[saved.page].label} ↗`;
     resume.hidden = false;
   }
 })();
