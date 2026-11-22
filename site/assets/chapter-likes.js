@@ -3,7 +3,7 @@
   const endpoint = window.MALFOID_LIKES?.endpoint;
   const comicId = new URLSearchParams(location.search).get('comic') || 'draconia';
   const comic = window.ReaderLibrary?.comic(comicId);
-  if (!endpoint || !comic) return;
+  if (!endpoint || !comic || comic.kind === 'anthology') return;
   const chapters = new Map(comic.chapters.map(chapter => [chapter.id, chapter]));
   const cards = [];
   for (const link of document.querySelectorAll('.chapter-card-link')) {

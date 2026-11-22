@@ -54,7 +54,7 @@
   $('#hero-art').setAttribute('aria-label', `Read ${data.title}`);
   $('#hero-image').src = data.preview;
   $('#hero-image').alt = `${data.title}, ${first.hasCover ? 'cover' : 'first comic page'}`;
-  $('#art-caption').textContent = first.hasCover ? 'EVERY STORY HAS A FIRST CHAPTER' : (data.complete ? `THE COMPLETE ${data.totalPages}-PAGE COMIC` : `${data.totalPages} COMIC PAGES · ${data.chapters.length} CHAPTERS`);
+  $('#art-caption').textContent = anthology ? `${data.chapters.length} SHORT COMICS · ${data.totalPages} PAGES` : (first.hasCover ? 'EVERY STORY HAS A FIRST CHAPTER' : (data.complete ? `THE COMPLETE ${data.totalPages}-PAGE COMIC` : `${data.totalPages} COMIC PAGES · ${data.chapters.length} CHAPTERS`));
   if (data.complete) $('#chapters-title').textContent = anthology ? 'Six little stories.' : 'The complete story.';
   const grid = $('#chapter-grid');
   if (data.chapters.length === 1) grid.classList.add('single-chapter');
