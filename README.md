@@ -2,12 +2,16 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, 5.2, 6, 6.1, and 6.2**, with 820 numbered comic pages and nineteen covers.
-- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 4, 5, 6, 7, 9, 13, 14, 15, 16, 17, 18, 19, and 20**, with **357 English comic pages and sixteen chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 8 and 10–12 have not been added to this website.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, 5.2, 6, 6.1, 6.2, and 6.3**, with 852 numbered comic pages and twenty covers.
+- **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 16, 17, 18, 19, and 20**, with **378 English comic pages and seventeen chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapters 10–12 have not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapters **1 and 2**, with **74 English comic pages and two chapter covers**. Chapter 2 is in progress and currently includes pages 1–28.
 
 Original stories are linked; their full text is not included. Chinese editions, drafts, and production references are excluded.
+
+Flirt Chapter 8 includes its independent cover and complete 21-page English sequence. It is inserted between Chapters 7 and 9. The current production-index hashes are preserved; the artist's request authorizes publishing these versions without changing local production-review records.
+
+Draconia Chapter 6.3, For the Hair, includes 31 story pages, back cover 32, and its independent approved cover. All 33 source images match the latest formal approval records, including the right-hand writing cover and revisions to pages 6–7, 26–28, 30, and 32. Page 31 retains its 1024 × 1728 extended canvas. Original artwork X links remain pending; original-story links use the existing sources. Source PNGs and Chinese editions are not modified.
 
 ## Website
 
@@ -17,7 +21,7 @@ Each image has a compact caption with its chapter and page number on the left, a
 
 Existing Draconia reader links without a `comic` parameter keep working, including their page numbers and original reading progress. Draconia page asset paths are preserved.
 
-Published images are WebP quality 92 at 1024 × 1536. Larger approved 2:3 images are reduced proportionally to this reading size. Only the small chapter-list thumbnails are resized. Source PNGs remain in the local comic project and are not uploaded.
+Published images are WebP quality 92, usually at 1024 × 1536. Approved extended pages retain their full height; Draconia 6.3 page 31 is 1024 × 1728. Larger approved 2:3 images are reduced proportionally to the standard reading size. Only the small chapter-list thumbnails are resized. Source PNGs remain in the local comic project and are not uploaded.
 
 ## Manual updates
 

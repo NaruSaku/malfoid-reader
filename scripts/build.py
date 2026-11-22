@@ -136,6 +136,8 @@ def main():
             if not thumbnail and image.size != (1024, 1536):
                 if source.is_relative_to(library_root / '视频漫画_彩色英文无水印'):
                     pass  # Preserve the original screenshot page proportions.
+                elif image.width == 1024 and image.height > 1536:
+                    pass  # Preserve approved extended pages without cropping or vertical compression.
                 elif image.width >= 1024 and image.height >= 1536 and image.width * 3 == image.height * 2:
                     image = image.resize((1024, 1536), Image.Resampling.LANCZOS)
                 else:

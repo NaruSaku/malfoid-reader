@@ -648,6 +648,26 @@
               "pending": true
             }
           ]
+        },
+        {
+          "id": "chapter-6-3",
+          "number": "6.3",
+          "title": "For the Hair",
+          "source": "漫画制作/第6.3章",
+          "cover": "封面_英文版.png",
+          "lastPage": 32,
+          "filenamePattern": "第{page:02d}页_英文版.png",
+          "description": "",
+          "storyUrl": "https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 32,
+              "url": null,
+              "pending": true
+            }
+          ]
         }
       ],
       "id": "draconia",
@@ -893,6 +913,26 @@
               "part": "I",
               "firstPage": 0,
               "lastPage": 20,
+              "url": null,
+              "pending": true
+            }
+          ]
+        },
+        {
+          "id": "year4-chapter-8",
+          "number": "8",
+          "title": "Flirt",
+          "source": "漫画制作/Chapter8/英文彩色漫画",
+          "cover": "封面_英文彩色.png",
+          "lastPage": 21,
+          "filenamePattern": "第{page:02d}页_英文彩色.png",
+          "description": "",
+          "storyUrl": "https://x.com/DodgerWing/status/2108657501407433152",
+          "posts": [
+            {
+              "part": "I",
+              "firstPage": 0,
+              "lastPage": 21,
               "url": null,
               "pending": true
             }
