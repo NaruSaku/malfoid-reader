@@ -24,7 +24,8 @@
     meta.textContent = comic.publicationLabel || (comic.complete ? 'COMPLETE ONE-SHOT' : `THROUGH CHAPTER ${comic.throughChapter}`);
     const title = document.createElement('h2');
     title.textContent = comic.title;
-    copy.append(meta, title);
+    if (comic.id !== 'year-4') copy.append(meta);
+    copy.append(title);
     if (comic.tagline) { const tagline = document.createElement('p'); tagline.className = 'comic-tagline'; tagline.textContent = comic.tagline; copy.append(tagline); }
     const description = document.createElement('p');
     description.className = 'comic-description';
