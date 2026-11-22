@@ -1,0 +1,46 @@
+/* Optional Ko-fi support, in the collection's warm green and gold palette. */
+.support-link{color:var(--gold);display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.support-link:hover,.support-footer-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.support-icon{font-style:normal;font-size:16px;line-height:1}
+.support-card{--support-ink:#f2ece0;--support-muted:#b3bbae;--support-gold:#d2bc92;--support-bg:#15241e;--support-line:#48533f;max-width:820px;margin:38px auto 25px;padding:36px 38px 27px;text-align:center;background:var(--support-bg);color:var(--support-ink);border:1px solid var(--support-line)}
+.support-card .support-eyebrow{color:var(--support-gold);font-size:10px;letter-spacing:.17em;line-height:1.7;margin:0 0 16px}
+.support-card h2{font:400 30px/1.25 var(--serif);margin:0 0 20px;color:var(--support-ink)}
+.support-card .support-copy{max-width:550px;margin:0 auto 16px;font-size:14px;line-height:1.9;color:var(--support-muted)}
+.support-card .support-thanks{font:italic 15px/1.7 var(--serif);margin:0 0 24px;color:var(--support-gold)}
+.support-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:13px 23px;background:var(--support-gold);color:#101b17;font-size:13px;line-height:1.5}
+.support-button:hover{background:#e3cca3}
+.support-card .support-note{font-size:11px;line-height:1.6;color:var(--support-muted);margin:14px 0 0}
+.support-compact{max-width:1116px;margin:0 auto 60px;padding:29px 28px;display:flex;align-items:center;justify-content:space-between;gap:28px;text-align:left}
+.support-compact h2{font-size:25px;margin-bottom:10px}
+.support-compact .support-copy{margin:0;max-width:680px;font-size:13px}
+.support-compact .support-button{flex-shrink:0}
+.support-footer-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px;font-size:11px;color:var(--gold);line-height:1.8}
+.reader-support-links{display:flex;align-items:center;justify-content:flex-end;gap:22px;font-size:11px}
+.reader-support-footer{max-width:820px;margin:36px auto 0;padding:25px 18px 20px;border-top:1px solid var(--reader-border);display:flex;align-items:center;justify-content:space-between;gap:22px}
+.reader-support-footer .footer-wordmark{font-size:18px}
+.reader-light .support-card{--support-ink:#203226;--support-muted:#455545;--support-gold:#546341;--support-bg:#eeece4;--support-line:#b5beab}
+.reader-light .support-button{background:#425c3f;color:#fffaf0}
+.reader-light .support-button:hover{background:#344b32}
+.reader-light .reader-support-footer .footer-wordmark,.reader-light .reader-support-footer .support-footer-links{color:#425c3f}
+@media(max-width:1000px){.support-compact{margin-left:35px;margin-right:35px}.reader-support-links{gap:15px}}
+@media(max-width:700px){
+  .site-header:has(.support-link){height:auto;min-height:88px;padding:17px 22px;flex-wrap:wrap;gap:16px}
+  .site-header:has(.support-link) nav{width:100%;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:11px}
+  .support-card{margin:28px 12px 20px;padding:29px 22px 24px}
+  .support-card h2{font-size:27px}
+  .support-compact{margin:0 22px 38px;display:block;padding:26px 22px}
+  .support-compact h2{font-size:24px}
+  .support-compact .support-button{margin-top:22px}
+  .reader-support-links{order:2;margin-left:auto;gap:13px;font-size:10px}
+  .reader-support-links .reader-story-link{order:0;margin:0}
+  .reader-support-links .support-icon{font-size:13px}
+  .reader-support-footer{margin:25px 12px 0;flex-wrap:wrap;justify-content:center;text-align:center}
+  .support-footer-links{gap:18px}
+}
+@media(max-width:420px){
+  .reader-header:has(.reader-support-links){padding-left:12px;padding-right:12px}
+  .reader-header:has(.reader-support-links) .reader-home{font-size:13px;gap:6px}
+  .reader-support-links{gap:10px;font-size:9px}
+  .reader-support-links .reader-story-link{font-size:9px}
+  .reader-support-links .support-icon{display:none}
+}
