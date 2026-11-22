@@ -3,7 +3,8 @@
   const endpoint = window.MALFOID_LIKES?.endpoint;
   const comicId = new URLSearchParams(location.search).get('comic') || 'draconia';
   const comic = window.ReaderLibrary?.comic(comicId);
-  if (!endpoint || !comic || comic.kind === 'anthology') return;
+  if (!endpoint || !comic) return;
+  const entryLabel = comic.kind === 'anthology' ? 'Short comic' : 'Chapter';
   const chapters = new Map(comic.chapters.map(chapter => [chapter.id, chapter]));
   const cards = [];
   for (const link of document.querySelectorAll('.chapter-card-link')) {
@@ -15,7 +16,7 @@
     row.className = 'chapter-meta-row';
     const likes = document.createElement('span');
     likes.className = 'chapter-like-count';
-    likes.setAttribute('aria-label', `Like count for Chapter ${chapter.number} is loading`);
+    likes.setAttribute('aria-label', `Like count for ${entryLabel} ${chapter.number} is loading`);
     const heart = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     heart.setAttribute('viewBox', '0 0 24 24');
     heart.setAttribute('aria-hidden', 'true');
@@ -41,11 +42,11 @@
       if (result.target !== card.target || !Number.isSafeInteger(result.count) || result.count < 0) throw new Error('Invalid count');
       const text = `${formatter.format(result.count)} ${result.count === 1 ? 'like' : 'likes'}`;
       card.count.textContent = formatter.format(result.count);
-      card.likes.setAttribute('aria-label', `Chapter ${card.number}: ${text}`);
+      card.likes.setAttribute('aria-label', `${entryLabel} ${card.number}: ${text}`);
       card.likes.title = text;
     } catch {
       card.count.textContent = '—';
-      card.likes.setAttribute('aria-label', `Likes for Chapter ${card.number} are temporarily unavailable`);
+      card.likes.setAttribute('aria-label', `Likes for ${entryLabel} ${card.number} are temporarily unavailable`);
       card.likes.title = 'Likes temporarily unavailable';
     }
   };

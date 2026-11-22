@@ -16,6 +16,8 @@ Use the owner's existing Cloudflare account and free Workers/D1 plan. Do not upg
 
 The Worker allows requests from the website origin, validates chapter keys and JSON, and keeps CORS responses uncached. Writes require the website Origin and JSON Content-Type. CORS is a browser restriction, not protection against determined scripted voters. Votes have a composite primary key; SQLite triggers update totals only for actual insertions/deletions, and D1 batches write/read operations in one transaction. No credentials are shipped to readers. An unavailable service shows an error, never a fabricated zero or a browser-only count.
 
+The six published Short Comics entries also use this service, under `short-comics:<lowercase-bvid>`. The Worker explicitly accepts those six IDs. Each story has its own shared total in the collection listing and reader. When adding another short comic, extend the Worker target validation before enabling its controls. No separate database or schema change is required.
+
 ## Checks
 
 Run `node --test services/likes/worker.test.mjs services/likes/frontend.test.mjs` with Node 24. The Worker tests execute the actual schema in in-memory SQLite and check duplicate requests, independent voters and chapters, unlikes, CORS/input errors, and backend outages. Frontend tests cover stale chapter responses, mode/page changes, failed writes and reload-before-retry, and unavailable browser storage. Local tests do not change production votes.

@@ -65,3 +65,16 @@ test('CORS, request validation, and outages do not create votes or false counts'
   assert.equal(env.sql.prepare('SELECT COUNT(*) n FROM chapter_likes').get().n, 0);
   env.sql.close();
 });
+test('all six short comics accept independent votes and unknown short comic IDs are rejected', async () => {
+  const env = database();
+  const ids = ['bv1dnne6peb3', 'bv1ecpm6zerj', 'bv1pjnb6ieja', 'bv1okxu6ret7', 'bv1hkx76peip', 'bv1iijc6ke1e'];
+  for (const id of ids) {
+    const key = `short-comics:${id}`;
+    assert.deepEqual((await send(env, 'GET', { target: key })).body, { target: key, count: 0, liked: false });
+    assert.equal((await send(env, 'POST', { target: key, visitor: a, liked: true })).body.count, 1);
+  }
+  for (const id of ids) assert.equal((await send(env, 'GET', { target: `short-comics:${id}` })).body.count, 1);
+  assert.equal((await send(env)).body.count, 0);
+  assert.equal((await send(env, 'GET', { target: 'short-comics:bv1unknown00' })).response.status, 400);
+  env.sql.close();
+});

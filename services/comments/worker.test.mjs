@@ -72,3 +72,19 @@ test('CORS, honeypot, length limits, and backend errors never publish invalid in
   assert.equal(env.sql.prepare('SELECT COUNT(*) n FROM page_comments').get().n,0);
   assert.equal((await send({DB:{prepare(){throw Error('offline')}}},'GET',{target,page:1})).response.status,503);env.sql.close();
 });
+test('short comic comments use separate story keys and preserve printed page numbers', async () => {
+  const env = database();
+  const keys = ['bv1dnne6peb3', 'bv1ecpm6zerj', 'bv1pjnb6ieja', 'bv1okxu6ret7', 'bv1hkx76peip', 'bv1iijc6ke1e'].map(id => `short-comics:${id}`);
+  for (const key of keys) {
+    const result = await send(env, 'GET', { target: key, page: 1 });
+    assert.equal(result.response.status, 200); assert.equal(result.body.total, 0);
+  }
+  const post = await send(env, 'POST', input({ target: keys[5], page: 13 }));
+  assert.equal(post.response.status, 201);
+  assert.equal((await send(env, 'GET', { target: keys[5], page: 13 })).body.total, 1);
+  for (const other of [{ target: keys[5], page: 11 }, { target: keys[0], page: 13 }, { target, page: 13 }]) {
+    assert.equal((await send(env, 'GET', other)).body.total, 0);
+  }
+  assert.equal((await send(env, 'GET', { target: 'short-comics:bv1unknown00', page: 1 })).response.status, 400);
+  env.sql.close();
+});

@@ -4,6 +4,8 @@ The existing `malfoid-reader-likes` Worker also serves `/v1/comments` using its 
 
 The reader attaches a collapsible comment panel to every image, including covers, in both page and scroll modes. A conversation uses the stable comic ID, chapter ID, and `page.number` (cover 0, body pages 1 onward). Opening a panel loads only that image's comments, in batches of 20. Drafts and in-flight submissions stay with their image while the reader changes page or reading mode. Nicknames are optional and unverified; an empty name displays as Anonymous. Comments are plain text and appear immediately. Names allow 40 characters and bodies 2,000 characters. No email address or account is required.
 
+Short Comics uses the same panels and database with independent `short-comics:<lowercase-bvid>` story keys. Comments retain each source's printed page number: the last story has pages 1–9 and 11–13, so its final image uses page 13 even though its reader URL has zero-based index 11.
+
 ## Owner moderation
 
 Sign in to Cloudflare, open **Storage & databases → D1 → malfoid-reader-likes → Explore Data**, then select **page_comments**. Each row includes its `id`, `chapter`, `page`, `name`, `body`, and `status`.

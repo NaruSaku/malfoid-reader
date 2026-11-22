@@ -23,10 +23,10 @@
     root.hidden = false;
     button.disabled = state.pending || !state.loaded || !storageAvailable;
     button.setAttribute('aria-pressed', String(Boolean(state.liked)));
-    button.setAttribute('aria-label', `${state.liked ? 'Unlike' : 'Like'} Chapter ${state.number}${state.loaded ? ` · ${state.count} likes` : ''}`);
+    button.setAttribute('aria-label', `${state.liked ? 'Unlike' : 'Like'} ${state.entryLabel} ${state.number}${state.loaded ? ` · ${state.count} likes` : ''}`);
     count.textContent = state.loaded ? new Intl.NumberFormat('en').format(state.count) : '—';
     label.textContent = state.liked ? 'Liked' : 'Like';
-    button.title = `${state.liked ? 'Unlike' : 'Like'} this chapter. No sign-in needed.`;
+    button.title = `${state.liked ? 'Unlike' : 'Like'} this ${state.entryLabel.toLowerCase()}. No sign-in needed.`;
     status.textContent = !storageAvailable ? 'Enable browser storage to like this chapter.' : (state.message || '');
     root.classList.toggle('likes-error', Boolean(state.message));
     status.disabled = !storageAvailable || state.pending;
@@ -81,7 +81,7 @@
     show({ comic, chapter }) {
       const target = `${comic.id}:${chapter.id}`;
       if (current?.target === target) return;
-      if (!states.has(target)) states.set(target, { target, number: chapter.number, count: 0, liked: false, loaded: false, pending: false });
+      if (!states.has(target)) states.set(target, { target, number: chapter.number, entryLabel: comic.kind === 'anthology' ? 'Short comic' : 'Chapter', count: 0, liked: false, loaded: false, pending: false });
       current = states.get(target); paint(current);
       load(current);
     }

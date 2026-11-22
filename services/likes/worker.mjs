@@ -1,5 +1,5 @@
 const SITE = 'https://narusaku.github.io';
-const TARGET = /^(?:draconia:chapter-\d{1,3}(?:-\d{1,2})?|year-4:year4-chapter-\d{1,3}|american-vacation:american-vacation-chapter-\d{1,3})$/;
+const TARGET = /^(?:draconia:chapter-\d{1,3}(?:-\d{1,2})?|year-4:year4-chapter-\d{1,3}|american-vacation:american-vacation-chapter-\d{1,3}|short-comics:(?:bv1dnne6peb3|bv1ecpm6zerj|bv1pjnb6ieja|bv1okxu6ret7|bv1hkx76peip|bv1iijc6ke1e))$/;
 const VISITOR = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i;
 
 async function visitorHash(visitor) {

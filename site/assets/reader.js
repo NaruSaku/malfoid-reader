@@ -93,7 +93,7 @@
       $('#end-heading').textContent = 'Thank you for reading.';
       $('#end-description').textContent = data.credits;
     }
-    if (!anthology) window.ReaderLikes?.show({ comic: data, chapter: current });
+    window.ReaderLikes?.show({ comic: data, chapter: current });
     pageSelect.value = String(pageIndex);
     $('#page-total').textContent = anthology ? `${current.pageCount} pages` : `/ ${current.pageCount}`;
     $('#previous').disabled = chapterIndex === 0 && pageIndex === 0;
@@ -160,7 +160,7 @@
       caption.append(original);
     }
     figure.append(button, caption);
-    if (!anthology) window.ReaderPageComments?.attach(figure, { comic: data, chapter: chapter(), page });
+    window.ReaderPageComments?.attach(figure, { comic: data, chapter: chapter(), page });
     return figure;
   };
   const render = (scrollToPage = true) => {

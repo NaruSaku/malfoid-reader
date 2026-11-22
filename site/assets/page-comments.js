@@ -75,7 +75,7 @@
   };
   const build = state => {
     const content = el('div', 'page-comments-content');
-    const heading = el('p', 'page-comments-context', `${state.comicName} · Chapter ${state.chapterNumber} · ${state.label}`);
+    const heading = el('p', 'page-comments-context', `${state.comicName} · ${state.entryLabel} ${state.chapterNumber} · ${state.label}`);
     const note = el('p', 'page-comments-note', 'No sign-in needed. Comments appear publicly as soon as you post. Please keep spoilers on the relevant page.');
     const form = el('form', 'page-comment-form');
     const suffix = `${state.comicId}-${state.chapterId}-${state.page}`;
@@ -132,7 +132,7 @@
         const details = el('details', 'page-comments');
         const summary = el('summary', '', 'Comments for this page');
         const total = el('span', 'page-comments-total'); summary.append(total); details.append(summary);
-        state = { target, comicId: comic.id, comicName: comic.shortTitle, chapterId: chapter.id, chapterNumber: chapter.number,
+        state = { target, comicId: comic.id, comicName: comic.shortTitle, chapterId: chapter.id, chapterNumber: chapter.number, entryLabel: comic.kind === 'anthology' ? 'Short comic' : 'Chapter',
           page: page.number, label: page.label, details, total, ids: new Set(), loaded: false, loading: false, posting: false };
         details.addEventListener('toggle', () => {
           if (!details.open) return;

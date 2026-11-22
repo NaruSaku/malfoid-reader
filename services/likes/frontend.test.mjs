@@ -62,3 +62,17 @@ test('offline loads and malformed responses never display a fabricated zero', as
   ui.status.events.click(); ui.answer(1, { target: 'wrong', count: 0, liked: false }); await tick();
   assert.equal(ui.count.textContent, '—'); assert.equal(ui.button.disabled, true);
 });
+test('short comics keep their own stable vote key and label', async () => {
+  const ui = setup();
+  const context = { comic: { id: 'short-comics', kind: 'anthology' }, chapter: { id: 'bv1iijc6ke1e', number: '6' } };
+  ui.window.ReaderLikes.show(context); ui.window.ReaderLikes.show(context);
+  assert.equal(ui.requests.length, 1);
+  assert.equal(new URL(ui.requests[0].url).searchParams.get('target'), 'short-comics:bv1iijc6ke1e');
+  ui.answer(0, { target: 'short-comics:bv1iijc6ke1e', count: 7, liked: false }); await tick();
+  assert.equal(ui.count.textContent, '7');
+  assert.match(ui.button.attributes['aria-label'], /Short comic 6/);
+  const click = ui.button.events.click();
+  assert.equal(JSON.parse(ui.requests[1].options.body).target, 'short-comics:bv1iijc6ke1e');
+  ui.answer(1, { target: 'short-comics:bv1iijc6ke1e', count: 8, liked: true }); await click;
+  assert.equal(ui.count.textContent, '8');
+});
