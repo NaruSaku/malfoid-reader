@@ -23,6 +23,29 @@
     }
   };
   let sessionVisitor;
+  const updateCount = (state, count) => {
+    state.total.textContent = count ? count.toLocaleString('en') : '+';
+    state.trigger.classList.toggle('has-comments', count > 0);
+    const label = `Comments for ${state.label.toLowerCase()} · ${count} ${count === 1 ? 'comment' : 'comments'}`;
+    state.trigger.setAttribute('aria-label', label);
+    state.trigger.title = label;
+  };
+  const countObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      countObserver.unobserve(entry.target);
+      const state = [...panels.values()].find(panel => panel.trigger === entry.target);
+      if (!state || state.loaded || state.previewRequest) continue;
+      // Load only nearby page counts, reusing the response if the reader opens the panel.
+      state.previewRequest = request({ ...state, cursor: null });
+      state.previewRequest.then(result => {
+        if (Number.isSafeInteger(result.total) && result.total >= 0 && !state.loaded && !state.posting) updateCount(state, result.total);
+      }).catch(() => {
+        state.previewRequest = null;
+        state.trigger.title = 'Open comments for this page';
+      });
+    }
+  }, { rootMargin: '200px' });
   const request = async (state, input) => {
     const url = new URL(endpoint);
     const options = { credentials: 'omit', cache: 'no-store', signal: AbortSignal.timeout(15000) };
@@ -59,14 +82,16 @@
     state.retry.hidden = true; state.more.disabled = true;
     if (!more) { state.cursor = null; state.ids.clear(); state.list.replaceChildren(); }
     try {
-      const result = await request(state);
+      const preview = !more && state.previewRequest;
+      state.previewRequest = null;
+      const result = await (preview || request(state));
       if (!Array.isArray(result.comments) || !Number.isSafeInteger(result.total) || result.total < 0 || (result.nextCursor !== null && (!Number.isSafeInteger(result.nextCursor) || result.nextCursor < 1))) throw new Error('Comments could not load. Please try again.');
       result.comments.forEach(comment => addComment(state, comment));
       state.cursor = result.nextCursor;
       state.more.hidden = !state.cursor;
       state.loaded = true; state.loadedAt = Date.now();
       state.status.textContent = result.total ? '' : 'Be the first to comment on this page.';
-      state.total.textContent = ` · ${result.total}`;
+      updateCount(state, result.total);
     } catch (error) {
       state.status.textContent = error.message;
       state.retry.hidden = false;
@@ -129,19 +154,31 @@
       const panelKey = `${target}:${page.number}`;
       let state = panels.get(panelKey);
       if (!state) {
-        const details = el('details', 'page-comments');
-        const summary = el('summary', '', 'Comments for this page');
-        const total = el('span', 'page-comments-total'); summary.append(total); details.append(summary);
+        const details = el('section', 'page-comments');
+        details.id = `page-comments-${comic.id}-${chapter.id}-${page.number}`;
+        details.hidden = true;
+        const trigger = el('button', 'page-comments-bubble'); trigger.type = 'button';
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.setAttribute('aria-controls', details.id);
+        trigger.setAttribute('aria-label', `Comments for ${page.label.toLowerCase()}`);
+        trigger.title = 'Open comments for this page';
+        const total = el('span', 'page-comments-total', '+'); total.setAttribute('aria-hidden', 'true');
+        trigger.append(total);
         state = { target, comicId: comic.id, comicName: comic.shortTitle, chapterId: chapter.id, chapterNumber: chapter.number, entryLabel: comic.kind === 'anthology' ? 'Short comic' : 'Chapter',
-          page: page.number, label: page.label, details, total, ids: new Set(), loaded: false, loading: false, posting: false };
-        details.addEventListener('toggle', () => {
-          if (!details.open) return;
+          page: page.number, label: page.label, details, trigger, total, ids: new Set(), loaded: false, loading: false, posting: false };
+        trigger.addEventListener('click', () => {
+          details.hidden = !details.hidden;
+          trigger.setAttribute('aria-expanded', String(!details.hidden));
+          if (details.hidden) return;
           if (!state.list) build(state);
           if (!state.loaded || (!state.posting && Date.now() - state.loadedAt > 30000)) load(state);
+          details.scrollIntoView({ block: 'start', behavior: 'smooth' });
         });
         panels.set(panelKey, state);
       }
+      figure.querySelector('.comic-page-artwork').append(state.trigger);
       figure.append(state.details);
+      countObserver.observe(state.trigger);
     }
   };
 })();

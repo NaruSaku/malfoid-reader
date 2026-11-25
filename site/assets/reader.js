@@ -159,7 +159,10 @@
       original.setAttribute('aria-label', `${page.sourceUrl ? 'Original comic on bilibili' : 'Original post on X'} for ${page.label.toLowerCase()} (opens in a new tab)`);
       caption.append(original);
     }
-    figure.append(button, caption);
+    const artwork = document.createElement('div');
+    artwork.className = 'comic-page-artwork';
+    artwork.append(button);
+    figure.append(artwork, caption);
     window.ReaderPageComments?.attach(figure, { comic: data, chapter: chapter(), page });
     return figure;
   };
