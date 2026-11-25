@@ -100,6 +100,16 @@
   };
   const build = state => {
     const content = el('div', 'page-comments-content');
+    const header = el('div', 'page-comments-header');
+    const title = el('h2', 'page-comments-title', 'Page comments');
+    const close = el('button', 'page-comments-close', '×'); close.type = 'button';
+    close.setAttribute('aria-label', `Close comments for ${state.label.toLowerCase()}`);
+    close.addEventListener('click', () => {
+      state.details.hidden = true;
+      state.trigger.setAttribute('aria-expanded', 'false');
+      state.trigger.focus({ preventScroll: true });
+    });
+    header.append(title, close);
     const heading = el('p', 'page-comments-context', `${state.comicName} · ${state.entryLabel} ${state.chapterNumber} · ${state.label}`);
     const note = el('p', 'page-comments-note', 'No sign-in needed. Comments appear publicly as soon as you post. Please keep spoilers on the relevant page.');
     const form = el('form', 'page-comment-form');
@@ -145,7 +155,7 @@
       } catch (error) { submitStatus.textContent = error.message; }
       finally { state.posting = false; submit.disabled = false; name.disabled = false; body.disabled = false; }
     });
-    content.append(heading, note, form, state.status, state.retry, state.list, state.more);
+    content.append(header, heading, note, state.status, state.retry, state.list, state.more, form);
     state.details.append(content);
   };
   window.ReaderPageComments = {
@@ -172,7 +182,7 @@
           if (details.hidden) return;
           if (!state.list) build(state);
           if (!state.loaded || (!state.posting && Date.now() - state.loadedAt > 30000)) load(state);
-          details.scrollIntoView({ block: 'start', behavior: 'smooth' });
+          if (!window.matchMedia('(min-width: 1100px)').matches) details.scrollIntoView({ block: 'start', behavior: 'smooth' });
         });
         panels.set(panelKey, state);
       }
