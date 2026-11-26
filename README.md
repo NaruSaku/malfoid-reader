@@ -2,7 +2,7 @@
 
 An English comic collection illustrated by [Crepuscule3307](https://x.com/wanruochenhun).
 
-- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, 5.2, 6, 6.1, 6.2, and 6.3**, with 852 numbered comic pages and twenty covers.
+- **Draconia Malfoy and the Boy Who Said No**, based on the [story by nomoontwo_](https://www.wattpad.com/story/416789252-draconia-malfoy-and-the-boy-who-said-no): Chapters **1, 1.1, 2, 2.1, 2.2, 2.3, 2.4, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, 5.2, 6, 6.1, 6.2, 6.3, and 7**, with 913 numbered comic pages and twenty-one covers.
 - **Flirt** (formerly Year 4), featuring Lyra Malfoy, based on the [story by DodgerWing](https://x.com/DodgerWing/status/2108657501407433152): Chapters **1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, and 20**, with **417 English comic pages and nineteen chapter covers**. Chapter 9 includes all 37 approved pages, including the restored dialogue and final page order. Chapter 12 has not been added to this website.
 
 - **Harry Potter and the American Vacation**, based on the [story by ShamashAran](https://x.com/ShamashAran/status/2110889440096690327): Chapters **1 and 2**, with **74 English comic pages and two chapter covers**. Chapter 2 is in progress and currently includes pages 1–28.
@@ -157,3 +157,5 @@ Short Comics: six comics (67 colour English pages) sourced from Focolate @ bilib
 Per-page anonymous comments use compact speech-bubble buttons: a plus sign for empty pages and the comment count otherwise. Desktop buttons sit beside the artwork; narrow screens place them below the image without covering art or source links. Counts load near the viewport and reuse their response when opened. Existing page identities and comments are preserved.
 
 On desktop viewports at least 1100px wide, opening a page comment bubble reserves a separate right-hand column for that page’s comments. The column stays in view while reading its image, scrolls independently, and has a close button. Narrower screens retain the below-image panel. Comment data and page keys are unchanged.
+
+Draconia Chapter 7, The Ferret, includes its approved cover, story pages 1–60 and back cover 61. All 62 images match the November 25 formal SHA manifest and individual approval records, including the latest pages 44–45. Original artwork X links are pending; the original story directory remains linked. Source images and production records are unchanged.
